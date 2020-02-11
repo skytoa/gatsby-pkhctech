@@ -1,0 +1,17 @@
+{
+  "title": "Gatsby Việt",
+  "description": "Kick off your next, great Gatsby project with this default-starter-intl. This barebones starter ships with the main Gatsby configuration files you might need.",
+  "author": "@wiziple",
+  "hello": "Hi people",
+  "welcome": "Chào mừng đến với trang web Gatsby mới",
+  "title_page2": "Trang 2",
+  "hello_page2": "Chào trang 2",
+  "go_page2": "Đến trang 2",
+  "build": "Now go build something great.",
+  "welcome_page2": "Chào trang 2",
+  "go_back": "Quay lại trang chủ",
+  "notfound": {
+    "header": "NOT FOUND",
+    "description": "You just hit a route that doesn't exist... the sadness."
+  }
+}
