@@ -14,5 +14,14 @@
   "notfound": {
     "header": "NOT FOUND",
     "description": "You just hit a route that doesn't exist... the sadness."
+  },
+  "navigation": {
+    "home": "Home",
+    "services": "Services",
+    "project": "Project",
+    "product": "Product",
+    "careers": "Careers",
+    "about_us": "About Us",
+    "contact": "Contact"
   }
 }

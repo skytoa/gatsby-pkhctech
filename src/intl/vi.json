@@ -12,7 +12,16 @@
   "welcome_page2": "Chào trang 2",
   "go_back": "Quay lại trang chủ",
   "notfound": {
-    "header": "NOT FOUND",
+    "header": "Khong tim thay",
     "description": "You just hit a route that doesn't exist... the sadness."
+  },
+  "navigation": {
+    "home": "Trang Chủ",
+    "services": "Dịch Vụ",
+    "project": "Dự Án",
+    "product": "Sản Phẩm",
+    "careers": "Việc Làm",
+    "about_us": "Về Chúng Tôi",
+    "contact": "Liên Hệ"
   }
 }
