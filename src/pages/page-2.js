@@ -1,8 +1,8 @@
 import React from "react"
 import { useIntl, Link, FormattedMessage } from "gatsby-plugin-intl"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../layouts"
+import SEO from "../layouts/seo"
 
 const SecondPage = () => {
   const intl = useIntl()
