@@ -1,19 +1,33 @@
 import React from "react"
-import { Link as RouterLink } from 'gatsby-plugin-intl'
+import { Link } from 'gatsby-plugin-intl'
 // import PropTypes from "prop-types"
 import Typography from '@material-ui/core/Typography';
-import MuiLink from '@material-ui/core/Link';
+import { makeStyles } from '@material-ui/core/styles';
 
-const Footer = () => (
-  <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
-      <MuiLink color="inherit" component={RouterLink} to="/">
-        Your Website
-      </MuiLink>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-)
+const useStyles = makeStyles(theme => ({
+  footer: {
+    background: '#fff',
+  },
+}));
+
+
+const Footer = () => {
+  const classes = useStyles();
+
+  return (
+    <footer className={classes.footer}>
+      <Typography variant="body2" color="textSecondary" align="center">
+        {`Copyright © ${new Date().getFullYear()} `}
+        <Link
+          to="/"
+        >
+          PKH Technologies
+        </Link>
+        {'. All rights reserved.'}
+      </Typography>
+    </footer>
+  )
+}
 
 // Footer.propTypes = {
 //   siteTitle: PropTypes.string,
