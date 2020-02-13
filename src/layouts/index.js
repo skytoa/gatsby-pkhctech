@@ -11,8 +11,10 @@ import { useStaticQuery, graphql } from "gatsby"
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Container from '@material-ui/core/Container';
 
-import Header from "./Header"
-import Footer from './Footer'
+import Header from "./Header";
+import Footer from './Footer';
+
+import '../css/typography.css';
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`

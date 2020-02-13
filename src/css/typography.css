@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "SVN Aguda";
+  src: url("../fonts/SVN-Aguda/SVN-Aguda-Regular.woff");
+}
+
+@font-face {
+  font-family: "SVN Aguda";
+  src: url("../fonts/SVN-Aguda/SVN-Aguda-Bold.woff");
+  font-weight: bold;
+}
