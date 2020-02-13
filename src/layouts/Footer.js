@@ -14,39 +14,42 @@ const useStyles = makeStyles(theme => ({
     background: '#fff',
     borderTop: '10px solid #F2F2F4',
     borderBottom: '10px solid #F2F2F4',
-    borderRight: '10px solid #F2F2F4',
     padding: '10px',
     overflow: 'hidden',
   },
   root: {
     flexGrow: 1,
   },
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-  },
   right: {
     background: '#F2F2F4',
     position: 'relative',
+    justifyContent: 'flex-end',
+
+    [theme.breakpoints.between('xs', 'sm')]: {
+      justifyContent: 'space-around',
+    },
+
+    [theme.breakpoints.only('md')]: {
+      justifyContent: 'space-between',
+    },
 
     '&::before': {
       content: '""',
       top: 0,
-      left: '-50px',
+      left: '-100px',
       height: 0,
       width: 0,
       position: "absolute",
       borderBottom: '320px solid #F2F2F4',
-      borderLeft: '50px solid transparent',
+      borderLeft: '100px solid transparent',
     },
 
     '&::after': {
       content: '""',
       top: 0,
-      right: '-100%',
+      right: '-100vh',
       height: '100%',
-      width: '100%',
+      width: '100vh',
       position: "absolute",
       background: '#f2f2f4',
     },
@@ -73,7 +76,7 @@ const Footer = () => {
             <FooterAddress />
             <FooterCopyright />
           </Grid>
-          <Grid container item xs={12} sm={12} md={12} lg={3} className={classes.right} justify="flex-end">
+          <Grid container item xs={12} sm={12} md={12} lg={3} className={classes.right}>
             <div className={classes.footer__logo}>
               <FooterLogoImage />
             </div>
