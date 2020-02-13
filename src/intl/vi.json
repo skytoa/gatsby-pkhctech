@@ -15,6 +15,13 @@
     "header": "Khong tim thay",
     "description": "You just hit a route that doesn't exist... the sadness."
   },
+  "address": "Địa chỉ",
+  "office": "Văn phòng",
+  "phone": "Điện thoại",
+  "email": "Email",
+  "company": {
+    "address": "Tầng 4, Tòa nhà HueCIT, <br />06 Lê Lợi, Vĩnh Ninh Ward, <br />Thành phố Huế, Việt Nam"
+  },
   "navigation": {
     "home": "Trang Chủ",
     "services": "Dịch Vụ",
@@ -23,5 +30,6 @@
     "careers": "Việc Làm",
     "about_us": "Về Chúng Tôi",
     "contact": "Liên Hệ"
-  }
+  },
+  "follow_us": "Follow Us"
 }

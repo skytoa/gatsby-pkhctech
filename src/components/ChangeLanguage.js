@@ -10,6 +10,7 @@ import MenuList from '@material-ui/core/MenuList';
 import Paper from '@material-ui/core/Paper';
 import Popper from '@material-ui/core/Popper';
 import TranslateIcon from '@material-ui/icons/Translate';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -72,6 +73,7 @@ const ChangeLanguage = () => {
           aria-haspopup="true"
           onClick={handleToggle}
           startIcon={<TranslateIcon />}
+          endIcon={<ExpandMoreIcon />}
         >
           <FormattedMessage id="current_language" />
         </Button>

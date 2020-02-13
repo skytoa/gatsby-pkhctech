@@ -7,15 +7,18 @@ const useStyles = makeStyles(theme => ({
   link: {
     color: '#222',
     fontFamily: 'Roboto',
-    fontSize: '22px',
-    marginRight: '15px',
-    textDecoration: 'none'
+    fontSize: '18px',
+    marginRight: '20px',
+    textDecoration: 'none',
+    textTransform: 'uppercase'
   },
   navbar: {
     display: 'flex',
     flexDirection: 'row',
     listStyle: 'none',
     padding: 0,
+    marginTop: '26px',
+    marginBottom: '36px'
   }
 }));
 
@@ -25,10 +28,9 @@ const FooterNavbar = () => {
   const renderMenuLinks = data => {
     return data.map(item => {
       return (
-        <li>
+        <li key={item.name}>
           <Link
             className={classes.link}
-            key={item.name}
             to={item.link}
           >
             <FormattedMessage id={item.name} />

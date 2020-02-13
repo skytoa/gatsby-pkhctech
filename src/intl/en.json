@@ -15,6 +15,13 @@
     "header": "NOT FOUND",
     "description": "You just hit a route that doesn't exist... the sadness."
   },
+  "address": "Address",
+  "office": "Office",
+  "phone": "Phone",
+  "email": "Email",
+  "company": {
+    "address": "4F, HueCIT Building, <br />06 Le Loi, Vinh Ninh Ward, <br />Hue City, Vietnam"
+  },
   "navigation": {
     "home": "Home",
     "services": "Services",
@@ -23,5 +30,6 @@
     "careers": "Careers",
     "about_us": "About Us",
     "contact": "Contact"
-  }
+  },
+  "follow_us": "Follow Us"
 }
