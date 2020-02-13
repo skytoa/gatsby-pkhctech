@@ -49,7 +49,25 @@ module.exports = {
         display: 'swap'
       }
     },
-    `gatsby-plugin-material-ui`
+    {
+      resolve: `gatsby-source-wordpress`,
+      options: {
+        baseUrl: `vuhb.000webhostapp.com`,
+        protocol: `https`,
+        hostingWPCOM: false,
+        useACF: true,
+        includedRoutes: [
+          "**/categories",
+          "**/posts",
+          "**/pages",
+          "**/media",
+          "**/tags",
+          "**/taxonomies",
+          "**/users",
+        ],
+      },
+    },
+    `gatsby-plugin-material-ui`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
