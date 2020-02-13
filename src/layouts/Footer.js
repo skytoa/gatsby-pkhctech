@@ -3,10 +3,12 @@ import React from "react"
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
-import FooterAddress from '../components/Footer/FooterAddress';
-import FooterCopyright from "../components/Footer/FooterCopyright";
-import FooterLogoImage from '../components/Footer/FooterLogoImage';
-import FooterNavbar from '../components/Footer/FooterNavbar';
+import {
+  FooterAddress,
+  FooterCopyright,
+  FooterLogoImage,
+  FooterNavbar
+} from '../components/Footer/';
 import FollowUs from '../components/FollowUs';
 
 const useStyles = makeStyles(theme => ({
@@ -96,4 +98,4 @@ const Footer = () => {
 //   siteTitle: ``,
 // }
 
-export default Footer
+export default Footer;
