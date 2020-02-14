@@ -31,5 +31,11 @@
     "about_us": "About Us",
     "contact": "Contact"
   },
-  "follow_us": "Follow Us"
+  "follow_us": "Follow Us",
+  "view_more": "View More",
+  "our_service": {
+    "title": "Our <span>Services</span>",
+    "desc_one": "We have abilities to work in<br /> Industrial Control Systems and Applications.",
+    "desc_two": "We have abilities to work in<br /> Website & Mobile Apps Design, Software Design."
+  }
 }

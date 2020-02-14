@@ -31,5 +31,11 @@
     "about_us": "Về Chúng Tôi",
     "contact": "Liên Hệ"
   },
-  "follow_us": "Follow Us"
+  "follow_us": "Follow Us",
+  "view_more": "Xem Thêm",
+  "our_service": {
+    "title": "<span>Dịch Vụ</span>",
+    "desc_one": "Chúng tôi có khả năng làm việc trong<br /> Hệ thống và ứng dụng điều khiển công nghiệp.",
+    "desc_two": "Chúng tôi có khả năng làm việc trong<br /> Thiết kế Web, Ứng dụng di động, Thiết kế phần mềm."
+  }
 }

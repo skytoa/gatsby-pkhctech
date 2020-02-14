@@ -1,6 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { AniLink } from '../../components/TransitionLink';
+import { FormattedMessage } from "gatsby-plugin-intl";
+import PropTypes from "prop-types";
 
 const useStyles = makeStyles(theme => ({
   header: {
@@ -41,23 +43,31 @@ const useStyles = makeStyles(theme => ({
     },
   }
 }));
-const HeaderTitle = () => {
+const HeaderTitle = ({ to = "/", title = "", showMore }) => {
   const classes = useStyles();
   
   return (
     <div className={classes.header}>
       <h2 className={classes.title}>
-        <AniLink to="/services">
-          Our <span>Services</span>
-        </AniLink>
+        <AniLink to={to} dangerouslySetInnerHTML={{ __html: title }} />
       </h2>
-      <div className={classes.view_more}>
-        <AniLink to="/services">
-          View More
-        </AniLink>
-      </div>
+      {
+        showMore && (
+          <div className={classes.view_more}>
+            <AniLink to={to}>
+              <FormattedMessage id="view_more" />
+            </AniLink>
+          </div>
+        )
+      }
     </div>
   )
+}
+
+HeaderTitle.propTypes = {
+  to: PropTypes.string,
+  title: PropTypes.string,
+  showMore: PropTypes.bool,
 }
 
 export default HeaderTitle;

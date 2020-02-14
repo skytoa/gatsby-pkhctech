@@ -1,1 +1,1 @@
-export { default as LandingOurServices } from './LandingOurServices';
+export { default as LandingOurServices } from './OurServices';
