@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
   },
   button: {
-    color: '#fff',
+    color: theme.palette.text.primary,
   },
   paper: {
     marginRight: theme.spacing(2),
@@ -92,9 +92,7 @@ const ChangeLanguage = () => {
                           <MenuItem 
                             key={language}
                             onClick={() => changeLocale(language)}
-                            style={{
-                              color: currentLocale === language ? `blue` : `#222`,
-                            }}
+                            selected={ currentLocale === language }
                           >
                             {languageName[language]}
                           </MenuItem>

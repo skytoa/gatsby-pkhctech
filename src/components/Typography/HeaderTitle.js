@@ -12,12 +12,11 @@ const useStyles = makeStyles(theme => ({
 
     '& a': {
       textDecoration: 'none',
-      color: '#222',
+      color: theme.palette.text.primary,
     }
   },
   title: {
     fontSize: '53px',
-    
 
     [theme.breakpoints.down('sm')]: {
       fontSize: '36px',

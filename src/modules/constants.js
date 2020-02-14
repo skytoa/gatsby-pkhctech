@@ -1,5 +1,11 @@
+export const AppTheme = {
+  DARK: 'dark',
+  LIGHT: 'light'
+}
+
 export const LANGUAGE_EN = 'English';
 export const LANGUAGE_VI = 'Tiếng Việt';
+
 export const NAVIGATION = [
   {
     name: 'navigation.home',

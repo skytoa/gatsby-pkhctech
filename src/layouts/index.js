@@ -10,13 +10,25 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Container from '@material-ui/core/Container';
+import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+import AppThemeOptions from "./theme";
+import { AppTheme } from "../modules/constants";
 
 import Header from "./Header";
+import AppBar from './AppBar';
 import Footer from './Footer';
 
 import '../css/typography.css';
 
 const Layout = ({ children }) => {
+  const [theme, setTheme] = React.useState(AppTheme.LIGHT);
+
+  const toggleTheme = () => {
+    setTheme(theme === AppTheme.LIGHT ? AppTheme.DARK: AppTheme.LIGHT)
+  }
+
+  const muiTheme = createMuiTheme(AppThemeOptions[theme]);
+
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -29,12 +41,15 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <CssBaseline />
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <Container maxWidth="lg">
-        <main>{children}</main>
-      </Container>
-      <Footer />
+      <MuiThemeProvider theme={muiTheme}>
+        <CssBaseline />
+        <AppBar onThemeTypeSwitch={toggleTheme}/>
+        <Header siteTitle={data.site.siteMetadata.title} />
+        <Container maxWidth="lg">
+          <main>{children}</main>
+        </Container>
+        <Footer />
+      </MuiThemeProvider>
     </>
   )
 }

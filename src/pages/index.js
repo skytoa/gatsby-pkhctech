@@ -13,7 +13,6 @@ const IndexPage = () => {
       <SEO
         title={intl.formatMessage({ id: "title" })}
       />
-      <h1><FormattedMessage id="welcome" /></h1>
       <LandingOurServices />
       <Link to="/page-2/">
         {/* {intl.formatMessage({ id: "go_page2" })} */}
