@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Link } from 'gatsby-plugin-intl';
+import { AniLink } from '../../components/TransitionLink';
 
 const useStyles = makeStyles(theme => ({
   header: {
@@ -16,13 +16,29 @@ const useStyles = makeStyles(theme => ({
   title: {
     fontSize: '53px',
     
+
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '36px',
+    },
+
+    '&:hover': {
+      '& span': {
+        color: '#5E39BC',
+      }
+    },
+    
     '& span': {
+      transition: 'all .3s ease-in-out',
       color: '#2AA7DE',
     }
   },
   view_more: {
     fontSize: '20px',
     marginLeft: 'auto',
+
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '16px',
+    },
   }
 }));
 const HeaderTitle = () => {
@@ -31,10 +47,14 @@ const HeaderTitle = () => {
   return (
     <div className={classes.header}>
       <h2 className={classes.title}>
-        <Link to="/">Our <span>Services</span></Link>
+        <AniLink to="/services">
+          Our <span>Services</span>
+        </AniLink>
       </h2>
       <div className={classes.view_more}>
-        <Link to="/">View More</Link>
+        <AniLink to="/services">
+          View More
+        </AniLink>
       </div>
     </div>
   )
