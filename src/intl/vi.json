@@ -37,5 +37,11 @@
     "title": "<span>Dịch Vụ</span>",
     "desc_one": "Chúng tôi có khả năng làm việc trong<br /> hệ thống điều khiển công nghiệp.",
     "desc_two": "Chúng tôi có khả năng làm việc với<br /> Ứng dụng di động, thiết kế phần mềm và thiết kế Web"
+  },
+  "application": {
+    "title": "Ứng dụng",
+    "desc_one": "PLC programming for automation systems.",
+    "desc_two": "Monitoring production systems using IOT.",
+    "desc_three": "Motion controller board to control multi-axes systems."
   }
 }

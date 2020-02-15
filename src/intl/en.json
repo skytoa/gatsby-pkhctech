@@ -37,5 +37,11 @@
     "title": "Our <span>Services</span>",
     "desc_one": "We have abilities to work in<br /> Industrial Control Systems and Applications.",
     "desc_two": "We have abilities to work in<br /> Website & Mobile Apps Design, Software Design."
+  },
+  "application": {
+    "title": "Application",
+    "desc_one": "PLC programming for automation systems.",
+    "desc_two": "Monitoring production systems using IOT.",
+    "desc_three": "Motion controller board to control multi-axes systems."
   }
 }
