@@ -16,7 +16,8 @@ const appThemeOptions = {
         dark: red[600]
       },
       background: {
-        default: '#fff'
+        default: '#fff',
+        secondary: '#2AA7DE',
       }
     },
   },
@@ -34,7 +35,8 @@ const appThemeOptions = {
         dark: grey[600]
       },
       background: {
-        default: '#222'
+        default: '#222',
+        secondary: '#202020',
       }
     },
   }

@@ -3,12 +3,24 @@ import { makeStyles } from '@material-ui/core/styles';
 import { AniLink } from '../../components/TransitionLink';
 import { FormattedMessage } from "gatsby-plugin-intl";
 import PropTypes from "prop-types";
+import HeaderBGDot from '../../images/header-bg-dot.svg';
 
 const useStyles = makeStyles(theme => ({
   header: {
     fontFamily: 'SVN Aguda',
     display: 'flex',
     alignItems: 'baseline',
+    position: 'relative',
+
+    '&:before': {
+      content: "''",
+      width: '590px',
+      height: '1000px',
+      transform: 'skew(12deg)',
+      background: theme.palette.background.secondary,
+      position: 'absolute',
+      zIndex: '-2',
+    },
 
     '& a': {
       textDecoration: 'none',
@@ -17,6 +29,8 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     fontSize: '53px',
+    position: 'relative',
+    padding: '45px 0',
 
     [theme.breakpoints.down('sm')]: {
       fontSize: '36px',
@@ -26,6 +40,21 @@ const useStyles = makeStyles(theme => ({
       '& span': {
         color: '#5E39BC',
       }
+    },
+
+    '&:before': {
+      content: "''",
+      background: `url(${HeaderBGDot})`,
+      width: '340px',
+      height: '220px',
+      position: 'absolute',
+      top: '-12px',
+      left: '-10px',
+      zIndex: '-1',
+    },
+
+    '& a': {
+      color: '#fff',
     },
     
     '& span': {
@@ -42,7 +71,7 @@ const useStyles = makeStyles(theme => ({
     },
   }
 }));
-const HeaderTitle = ({ to, title, showMore }) => {
+const HeaderTitleDot = ({ to = "/", title = "", showMore }) => {
   const classes = useStyles();
   
   return (
@@ -63,16 +92,16 @@ const HeaderTitle = ({ to, title, showMore }) => {
   )
 }
 
-HeaderTitle.defaultProps = {
+HeaderTitleDot.defaultProps = {
   to: '/',
   title: '',
   showMore: false,
 };
 
-HeaderTitle.propTypes = {
+HeaderTitleDot.propTypes = {
   to: PropTypes.string,
   title: PropTypes.string,
   showMore: PropTypes.bool,
 }
 
-export default HeaderTitle;
+export default HeaderTitleDot;

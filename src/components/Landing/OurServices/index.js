@@ -35,7 +35,13 @@ const useStyles = makeStyles(theme => ({
   grid__image: {
     textAlign: 'center',
   },
+  factor: {
+    paddingTop: '60px',
+  },
   appDesign: {
+    paddingBottom: '60px',
+    marginBottom: 0,
+    
     '& div': {
       '&:nth-child(1)': {
         order: 0,
@@ -87,7 +93,7 @@ const LandingOurServices = () => {
     <>
       <HeaderTitle to="/services" title={intl.formatMessage({ id: "our_service.title" })} showMore />
       <div className={classes.root}>
-        <Grid container spacing={3} alignItems="center" >
+        <Grid container spacing={3} alignItems="center" className={classes.factor}>
           <Grid item xs={12} sm={12} md={6} className={classes.grid__image}>
           <Img 
             fixed={data.factoryImage.childImageSharp.fixed}
