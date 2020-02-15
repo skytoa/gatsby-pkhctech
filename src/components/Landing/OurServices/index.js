@@ -1,11 +1,17 @@
 import React from 'react';
-import { Grid, makeStyles } from '@material-ui/core';
+import { 
+  Grid,
+  makeStyles,
+  useMediaQuery,
+  useTheme,
+} from '@material-ui/core';
 import { HeaderTitle } from '../../Typography';
+import { removeLineBreak } from '../../../utilities/lineBreak';
 import { useIntl } from "gatsby-plugin-intl";
 import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
-import servicesBgLight from '../../../images/services/services_bg_light.svg';
 import servicesBgDark from '../../../images/services/services_bg_dark.svg';
+import servicesBgLight from '../../../images/services/services_bg_light.svg';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -43,8 +49,10 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const LandingOurServices = () => {
-  const intl = useIntl();
   const classes = useStyles();
+  const intl = useIntl();
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up('sm'));
 
   const data = useStaticQuery(graphql`
     query {
@@ -66,7 +74,13 @@ const LandingOurServices = () => {
   `)
 
   const fomatMessage = id => {
-    return { __html: intl.formatMessage({ id: id })}
+    const str = intl.formatMessage({ id: id });
+
+    if(matches) {
+      return { __html: str }
+    }
+
+    return { __html: removeLineBreak(str) }
   }
 
   return (
