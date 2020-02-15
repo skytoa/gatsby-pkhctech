@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import { Link } from "gatsby-plugin-intl";
+import { AniLink } from '../../components/TransitionLink';
 
 const FooterLogoImage = () => {
   const data = useStaticQuery(graphql`
@@ -16,7 +16,11 @@ const FooterLogoImage = () => {
     }
   `)
 
-  return <Link to="/"><Img fluid={data.placeholderImage.childImageSharp.fluid} /></Link>
+  return (
+    <AniLink to="/" aria-label="Logo">
+      <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+    </AniLink>
+  )
 }
 
 export default FooterLogoImage;

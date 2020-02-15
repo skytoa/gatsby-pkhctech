@@ -14,7 +14,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO
-        title={intl.formatMessage({ id: "title" })}
+        title={intl.formatMessage({ id: "introduce" })}
       />
       <LandingOurServices />
       <LandingApplication />

@@ -1,6 +1,6 @@
 {
   "current_language": "English",
-  "title": "Gatsby English",
+  "title": "PKH Technologies - We Make It Simple",
   "description": "Kick off your next, great Gatsby project with this default-starter-intl. This barebones starter ships with the main Gatsby configuration files you might need.",
   "author": "@wiziple",
   "hello": "Hi people",
@@ -15,6 +15,7 @@
     "header": "NOT FOUND",
     "description": "You just hit a route that doesn't exist... the sadness."
   },
+  "introduce": "Introduce",
   "address": "Address",
   "office": "Office",
   "phone": "Phone",

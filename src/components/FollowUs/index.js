@@ -49,8 +49,12 @@ const FollowUs = () => {
   return (
     <div className={classes.social}>
       <div className={classes.social__icon}>
-        <Link href="https://fb.com" target="_blank" rel="noreferrer"><FacebookIcon style={{ fontSize: 30 }} /></Link>
-        <Link href="https://youtube.com" target="_blank" rel="noreferrer"><YouTubeIcon style={{ fontSize: 38 }} /></Link>
+        <Link href="https://facebook.com/pkhctech" aria-label="Facebook" target="_blank" rel="noreferrer">
+          <FacebookIcon style={{ fontSize: 30 }} />
+        </Link>
+        <Link href="https://youtube.com" aria-label="Youtube" target="_blank" rel="noreferrer">
+          <YouTubeIcon style={{ fontSize: 38 }} />
+        </Link>
       </div>
       <div className={classes.text}><FormattedMessage id="follow_us" /></div>
     </div>

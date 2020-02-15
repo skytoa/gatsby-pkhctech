@@ -1,6 +1,6 @@
 {
   "current_language": "Tiếng Việt",
-  "title": "Gatsby Việt",
+  "title": "PKH Technologies - We Make It Simple",
   "description": "Kick off your next, great Gatsby project with this default-starter-intl. This barebones starter ships with the main Gatsby configuration files you might need.",
   "author": "@wiziple",
   "hello": "Hi people",
@@ -15,6 +15,7 @@
     "header": "Khong tim thay",
     "description": "You just hit a route that doesn't exist... the sadness."
   },
+  "introduce": "Giới thiệu",
   "address": "Địa chỉ",
   "office": "Văn phòng",
   "phone": "Điện thoại",
@@ -34,7 +35,7 @@
   "follow_us": "Follow Us",
   "view_more": "Xem Thêm",
   "our_service": {
-    "title": "<span>Dịch Vụ</span>",
+    "title": "<span>Dịch Vụ</span> của chúng tôi",
     "desc_one": "Chúng tôi có khả năng làm việc trong<br /> hệ thống điều khiển công nghiệp.",
     "desc_two": "Chúng tôi có khả năng làm việc với<br /> Ứng dụng di động, thiết kế phần mềm và thiết kế Web"
   },

@@ -4,12 +4,13 @@ import { HeaderTitle } from '../../Typography';
 import { useIntl } from "gatsby-plugin-intl";
 import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
-import servicesBg from '../../../images/services/services_bg.svg';
+import servicesBgLight from '../../../images/services/services_bg_light.svg';
+import servicesBgDark from '../../../images/services/services_bg_dark.svg';
 
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
-    background: `url(${servicesBg})`,
+    background: theme.palette.type === "light" ? `url(${servicesBgLight})` : `url(${servicesBgDark})`,
   },
   paper: {
     padding: theme.spacing(2),
