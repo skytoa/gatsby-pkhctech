@@ -18,6 +18,7 @@ const IndexPage = () => {
       />
       <LandingOurServices />
       <LandingApplication />
+      <LandingOurServices />
 
       <Link to="/page-2/">
         {/* {intl.formatMessage({ id: "go_page2" })} */}

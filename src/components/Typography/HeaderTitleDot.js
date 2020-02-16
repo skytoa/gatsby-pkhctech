@@ -15,8 +15,8 @@ const useStyles = makeStyles(theme => ({
     '&:before': {
       content: "''",
       width: '590px',
-      height: '1000px',
-      transform: 'skew(12deg)',
+      height: '830px',
+      transform: 'skew(14deg)',
       background: theme.palette.background.secondary,
       position: 'absolute',
       zIndex: '-2',
