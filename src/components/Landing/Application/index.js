@@ -19,16 +19,23 @@ const LandingApplication = () => {
 
   const data = useStaticQuery(graphql`
     query {
-      factoryImage: file(relativePath: { eq: "services/factory.png" }) {
+      imgOne: file(relativePath: { eq: "application/img1.jpg" }) {
         childImageSharp {
-          fixed(width: 416) {
+          fixed(width: 500) {
             src
           }
         }
       },
-      appDesignImage: file(relativePath: { eq: "services/undraw_progressive_app_m9ms.png" }) {
+      imgTwo: file(relativePath: { eq: "application/img2.jpg" }) {
         childImageSharp {
-          fixed(width: 416) {
+          fixed(width: 500) {
+            src
+          }
+        }
+      },
+      imgThree: file(relativePath: { eq: "application/img3.jpg" }) {
+        childImageSharp {
+          fixed(width: 500) {
             src
           }
         }
@@ -40,9 +47,9 @@ const LandingApplication = () => {
     <div className={classes.root}>
       <HeaderTitleDot to="/services" title={intl.formatMessage({ id: "application.title" })} showMore />
       <Grid container>
-        <ApplicationItem to="/services" title="PLC programming for automation systems." image={data.factoryImage.childImageSharp.fixed.src} />
-        <ApplicationItem to="/services" title="Monitoring production systems using IOT." image={data.factoryImage.childImageSharp.fixed.src} />
-        <ApplicationItem to="/services" title="Motion controller board to control multi-axes systems." image={data.appDesignImage.childImageSharp.fixed.src} />
+        <ApplicationItem to="/services" title="PLC programming for automation systems." image={data.imgOne.childImageSharp.fixed.src} />
+        <ApplicationItem to="/services" title="Monitoring production systems using IOT." image={data.imgTwo.childImageSharp.fixed.src} />
+        <ApplicationItem to="/services" title="Motion controller board to control multi-axes systems." image={data.imgThree.childImageSharp.fixed.src} />
       </Grid>
     </div>
   )
