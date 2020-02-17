@@ -47,7 +47,7 @@ const useStyles = makeStyles(theme => ({
       background: '#fff',
       bottom: 0,
       content: "''",
-      height: '32%',
+      height: '36%',
       opacity: 0,
       position: 'absolute',
       transform: 'translateY(200px)',
@@ -73,7 +73,7 @@ const useStyles = makeStyles(theme => ({
     minHeight: '111px',
     paddingRight: '60px',
     position: 'absolute',
-    textShadow: '0px 8px 26px rgba(0, 0, 0, .3)',
+    textShadow: '0px 8px 26px rgba(0, 0, 0, .4)',
     zIndex: 2,
 
     [theme.breakpoints.down('sm')]: {
