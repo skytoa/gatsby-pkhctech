@@ -26,7 +26,7 @@ const LandingClients = () => {
             image {
               localFile {
                 childImageSharp {
-                  fixed(height: 260) {
+                  fixed(height: 160) {
                     ...GatsbyImageSharpFixed
                   }
                 }
@@ -39,7 +39,7 @@ const LandingClients = () => {
             image {
               localFile {
                 childImageSharp {
-                  fixed(height: 260) {
+                  fixed(height: 160) {
                     ...GatsbyImageSharpFixed
                   }
                 }
@@ -52,7 +52,7 @@ const LandingClients = () => {
             image {
               localFile {
                 childImageSharp {
-                  fixed(height: 260) {
+                  fixed(height: 160) {
                     ...GatsbyImageSharpFixed
                   }
                 }
@@ -68,19 +68,22 @@ const LandingClients = () => {
 
   return (
     <div className={classes.root}>
-      <HeaderTitle to="/" title={intl.formatMessage({ id: "our_clients.title" })} showMore />
+      <HeaderTitle to="/" title={intl.formatMessage({ id: "our_clients.title" })} />
       <Grid container alignItems="center" justify="center">
         <ClientsItem
           name={data.wordpressPage.acf.brand.name}
           image={data.wordpressPage.acf.brand.image.localFile.childImageSharp.fixed}
+          to={data.wordpressPage.acf.brand.link}
         />
         <ClientsItem
           name={data.wordpressPage.acf.brand_2.name}
           image={data.wordpressPage.acf.brand_2.image.localFile.childImageSharp.fixed}
+          to={data.wordpressPage.acf.brand_2.link}
         />
         <ClientsItem
           name={data.wordpressPage.acf.brand_3.name}
           image={data.wordpressPage.acf.brand_3.image.localFile.childImageSharp.fixed}
+          to={data.wordpressPage.acf.brand_3.link}
         />
       </Grid>
     </div>
