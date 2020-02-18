@@ -13,9 +13,9 @@ import FollowUs from '../components/FollowUs';
 
 const useStyles = makeStyles(theme => ({
   footer: {
-    background: '#fff',
-    borderTop: '10px solid #F2F2F4',
-    borderBottom: '10px solid #F2F2F4',
+    background: theme.palette.primary,
+    borderTop: `10px solid ${theme.palette.type === "light" ? '#F2F2F4' : `${theme.palette.background.secondary}`}`,
+    borderBottom: `10px solid ${theme.palette.type === "light" ? '#F2F2F4' : `${theme.palette.background.secondary}`}`,
     padding: '10px',
     overflow: 'hidden',
   },
@@ -23,7 +23,7 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
   },
   right: {
-    background: '#F2F2F4',
+    background: theme.palette.type === "light" ? '#F2F2F4' : `${theme.palette.background.secondary}`,
     position: 'relative',
     justifyContent: 'flex-end',
 
@@ -42,7 +42,7 @@ const useStyles = makeStyles(theme => ({
       height: 0,
       width: 0,
       position: "absolute",
-      borderBottom: '320px solid #F2F2F4',
+      borderBottom: `320px solid ${theme.palette.type === "light" ? '#F2F2F4' : `${theme.palette.background.secondary}`}`,
       borderLeft: '100px solid transparent',
     },
 
@@ -53,7 +53,7 @@ const useStyles = makeStyles(theme => ({
       height: '100%',
       width: '100vh',
       position: "absolute",
-      background: '#f2f2f4',
+      background: theme.palette.type === "light" ? '#F2F2F4' : `${theme.palette.background.secondary}`,
     },
 
   },

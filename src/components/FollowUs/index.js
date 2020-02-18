@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
 
     '& a': {
-      color: '#222',
+      color: theme.palette.text.primary,
       marginRight: '10px',
 
       '&:hover': {
@@ -35,10 +35,10 @@ const useStyles = makeStyles(theme => ({
       content: '""',
       top: '8px',
       left: '10px',
-      background: '#222',
+      background: theme.palette.text.primary,
       height: '3px',
       width: '50px',
-      position: "absolute",
+      position: 'absolute',
     },
   }
 }));

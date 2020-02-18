@@ -1,18 +1,28 @@
 import React from 'react';
-import { Link } from 'gatsby-plugin-intl'
+import { AniLink } from '../TransitionLink';
+import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-const FooterCopyright = () => {
 
+const useStyles = makeStyles(theme => ({
+  link: {
+    color: theme.palette.text.secondary,
+    textDecoration: 'none',
+  },
+}));
+
+const FooterCopyright = () => {
+  const classes = useStyles();
   const getFullYear = new Date().getFullYear();
 
   return (
     <Typography variant="body2" color="textSecondary" style={{ margin: '36px 0'}}>
       {`Copyright © ${getFullYear} `}
-      <Link
+      <AniLink
         to="/"
+        class={classes.link}
       >
         PKH Technologies
-      </Link>
+      </AniLink>
       {'. All rights reserved.'}
     </Typography>
   )

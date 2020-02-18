@@ -64,8 +64,6 @@ const LandingClients = () => {
     }
   `)
 
-  console.log('data', data);
-
   return (
     <div className={classes.root}>
       <HeaderTitle to="/" title={intl.formatMessage({ id: "our_clients.title" })} />
