@@ -41,8 +41,8 @@
   },
   "application": {
     "title": "Ứng dụng",
-    "desc_one": "PLC programming for automation systems.",
-    "desc_two": "Monitoring production systems using IOT.",
-    "desc_three": "Motion controller board to control multi-axes systems."
+    "desc_one": "Lập trình PLC cho các hệ thống tự động.",
+    "desc_two": "Giám sát hệ thống sản xuất bằng IOT.",
+    "desc_three": "Bảng điều khiển chuyển động để điều khiển các hệ thống đa trục."
   }
 }

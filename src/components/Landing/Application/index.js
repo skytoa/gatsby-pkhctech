@@ -47,9 +47,9 @@ const LandingApplication = () => {
     <div className={classes.root}>
       <HeaderTitleDot to="/services" title={intl.formatMessage({ id: "application.title" })} showMore />
       <Grid container>
-        <ApplicationItem to="/services" title="PLC programming for automation systems." image={data.imgOne.childImageSharp.fixed.src} />
-        <ApplicationItem to="/services" title="Monitoring production systems using IOT." image={data.imgTwo.childImageSharp.fixed.src} />
-        <ApplicationItem to="/services" title="Motion controller board to control multi-axes systems." image={data.imgThree.childImageSharp.fixed.src} />
+        <ApplicationItem to="/services" title={intl.formatMessage({ id: "application.desc_one" })} image={data.imgOne.childImageSharp.fixed.src} />
+        <ApplicationItem to="/services" title={intl.formatMessage({ id: "application.desc_two" })} image={data.imgTwo.childImageSharp.fixed.src} />
+        <ApplicationItem to="/services" title={intl.formatMessage({ id: "application.desc_three" })} image={data.imgThree.childImageSharp.fixed.src} />
       </Grid>
     </div>
   )
