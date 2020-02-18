@@ -44,5 +44,8 @@
     "desc_one": "PLC programming for automation systems.",
     "desc_two": "Monitoring production systems using IOT.",
     "desc_three": "Motion controller board to control multi-axes systems."
+  },
+  "our_clients": {
+    "title": "Our <span>Clients</span>"
   }
 }

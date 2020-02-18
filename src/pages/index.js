@@ -5,6 +5,7 @@ import { useIntl, Link, FormattedMessage } from "gatsby-plugin-intl";
 import { 
   LandingOurServices,
   LandingApplication,
+  LandingClients,
 } from '../components/Landing';
 import { AniLink } from '../components/TransitionLink';
 
@@ -18,7 +19,7 @@ const IndexPage = () => {
       />
       <LandingOurServices />
       <LandingApplication />
-      <LandingOurServices />
+      <LandingClients />
 
       <Link to="/page-2/">
         {/* {intl.formatMessage({ id: "go_page2" })} */}

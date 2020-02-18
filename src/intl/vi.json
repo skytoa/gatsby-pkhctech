@@ -44,5 +44,8 @@
     "desc_one": "Lập trình PLC cho các hệ thống tự động.",
     "desc_two": "Giám sát hệ thống sản xuất bằng IOT.",
     "desc_three": "Bảng điều khiển chuyển động để điều khiển các hệ thống đa trục."
+  },
+  "our_clients": {
+    "title": "<span>Đối tác</span> của chúng tôi"
   }
 }
