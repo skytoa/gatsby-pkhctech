@@ -24,7 +24,7 @@ const useStyles = makeStyles(theme => ({
 
     '&:hover': {
       '& span': {
-        color: '#5E39BC',
+        color: '#009FD4',
       }
     },
     
