@@ -5,7 +5,7 @@ import { NAVIGATION } from '../../modules/constants';
 
 const useStyles = makeStyles(theme => ({
   link: {
-    color: '#222',
+    color: theme.palette.text.secondary,
     fontFamily: 'Roboto',
     fontSize: '18px',
     marginRight: '20px',
