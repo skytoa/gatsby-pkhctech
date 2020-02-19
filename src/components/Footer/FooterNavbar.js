@@ -1,7 +1,8 @@
 import React from 'react';
-import { Link, FormattedMessage } from 'gatsby-plugin-intl';
+import { FormattedMessage } from 'gatsby-plugin-intl';
 import { makeStyles } from '@material-ui/core/styles';
 import { NAVIGATION } from '../../modules/constants';
+import { AniLink } from '../TransitionLink';
 
 const useStyles = makeStyles(theme => ({
   link: {
@@ -19,6 +20,9 @@ const useStyles = makeStyles(theme => ({
     padding: 0,
     marginTop: '26px',
     marginBottom: '36px'
+  },
+  active: {
+    color: theme.palette.text.primary
   }
 }));
 
@@ -29,12 +33,13 @@ const FooterNavbar = () => {
     return data.map(item => {
       return (
         <li key={item.name}>
-          <Link
+          <AniLink
             className={classes.link}
             to={item.link}
+            activeClassName={classes.active}
           >
             <FormattedMessage id={item.name} />
-          </Link>
+          </AniLink>
         </li>
       )
     })

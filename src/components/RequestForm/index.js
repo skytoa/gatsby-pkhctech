@@ -7,30 +7,35 @@ import { AniLink } from '../TransitionLink';
 const useStyles = makeStyles(theme => ({
   root: {
     background: theme.palette.type === "light" ? '#fff' : `${theme.palette.background.secondary}`,
-    width: '622px',
+    width: '100%',
     height: '297px',
     display: 'flex',
     padding: '45px 10px 0',
-    margin: '0 0 0 -3px',
-    position: 'relative',
-    boxShadow: '-25px -5px 79px rgba(0, 0, 0, 0.3)',
+    margin: '0 0 6px -2px',
+    boxShadow: '90px 0 79px rgba(0, 0, 0, 0.1)',
 
     [theme.breakpoints.down('sm')]: {
       marginTop: '66px',
       height: 'auto',
       padding: '25px',
       flexDirection: 'column',
+      boxShadow: '0 0 40px rgba(0, 0, 0, 0.1)',
     },
 
     '&::before': {
       content: "''",
       position: 'absolute',
-      background: theme.palette.type === "light" ? '#222' : `#000`,
-      width: '676px',
+      background: 'linear-gradient(200deg, #663399, #2AA7DE)',
+      width: '90%',
       height: '220px',
-      top: '-26px',
-      right: '-26px',
+      top: '140px',
+      right: '0',
       zIndex: -1,
+
+      [theme.breakpoints.down('sm')]: {
+        top: '26px',
+        width: '100%',
+      },
     }
   },
   left: {
