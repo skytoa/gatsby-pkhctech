@@ -1,17 +1,17 @@
 import React from 'react';
 import { makeStyles, TextField } from '@material-ui/core';
-import SubdirectoryArrowRightIcon from '@material-ui/icons/SubdirectoryArrowRight';
+import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 import { FormattedMessage } from "gatsby-plugin-intl";
 import { AniLink } from '../TransitionLink';
 
 const useStyles = makeStyles(theme => ({
   root: {
     background: theme.palette.type === "light" ? '#fff' : `${theme.palette.background.secondary}`,
-    width: '100%',
-    height: '300px',
+    width: '622px',
+    height: '297px',
     display: 'flex',
     padding: '45px 0 0',
-    margin: '0 0 47px 0',
+    margin: '0 0 0 -3px',
     position: 'relative',
     boxShadow: '-25px -5px 79px rgba(0, 0, 0, 0.3)',
 
@@ -26,7 +26,7 @@ const useStyles = makeStyles(theme => ({
       content: "''",
       position: 'absolute',
       background: theme.palette.type === "light" ? '#222' : `#000`,
-      width: '1200px',
+      width: '676px',
       height: '220px',
       top: '-26px',
       right: '-26px',
@@ -109,7 +109,7 @@ const RequestForm = ({ title }) => {
         />
       </div>
       <AniLink to="/contact" className={classes.button}>
-        <SubdirectoryArrowRightIcon style={{ fontSize: '80px' }} />
+        <ArrowRightAltIcon style={{ fontSize: '80px' }} />
         <p className={classes.button__paragraph}>
           <FormattedMessage id="contact_us" />
         </p>

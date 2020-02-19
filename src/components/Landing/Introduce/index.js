@@ -49,6 +49,7 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'flex-end',
+    justifyContent: 'center',
   },
   contact__box: {
     background: '#fff',
@@ -106,7 +107,7 @@ const LandingIntroduce = () => {
         The company operates in the field of electronic circuit design, embedded system programming, software development for automatic control systems on PLC equipment in industry, developing SCADA systems.
       </p>
       <Container maxWidth="lg" className={classes.contact}>
-        <svg id="undraw_fill_forms_yltj" xmlns="http://www.w3.org/2000/svg" width="271" height="570" viewBox="0 0 266.529 570.785" className={classes.svg}>
+        <svg id="undraw_fill_forms_yltj" xmlns="http://www.w3.org/2000/svg" width="223" height="471" viewBox="0 0 266.529 570.785" className={classes.svg}>
           <path id="Path_64" data-name="Path 64" className={classes.cls_1} d="M340.761,306.128s11.934,3.59,21.31,25.132a108.982,108.982,0,0,0,5.112,10.14c9.6,17.015,13.641,76.923,13.641,76.923L335.647,391.4Z" transform="translate(-122.006 -146.39)"/>
           <path id="Path_65" data-name="Path 65" className={classes.cls_2} d="M340.761,306.128s11.934,3.59,21.31,25.132,27.531,40.935,18.753,87.063L335.647,391.4Z" transform="translate(-120.499 -144.802)"/>
           <path id="Path_66" data-name="Path 66" className={classes.cls_3} d="M115.793,125.975l7.672,51.161,52.849,2.693-5.967-75.395Z" transform="translate(-17.092 -10.699)"/>
