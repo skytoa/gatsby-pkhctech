@@ -19,7 +19,7 @@ const FooterCopyright = () => {
       {`Copyright © ${getFullYear} `}
       <AniLink
         to="/"
-        class={classes.link}
+        className={classes.link}
       >
         PKH Technologies
       </AniLink>

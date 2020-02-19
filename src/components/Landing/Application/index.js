@@ -3,7 +3,7 @@ import { HeaderTitleDot } from '../../Typography';
 import { makeStyles } from '@material-ui/core';
 import { useIntl } from "gatsby-plugin-intl";
 import { useStaticQuery, graphql } from "gatsby";
-import Grid from '@material-ui/core/Grid';
+import { Grid, Container } from '@material-ui/core';
 import ApplicationItem from './ApplicationItem';
 
 const useStyles = makeStyles(theme => ({
@@ -44,14 +44,14 @@ const LandingApplication = () => {
   `)
 
   return (
-    <div className={classes.root}>
+    <Container maxWidth="lg" className={classes.root}>
       <HeaderTitleDot to="/services" title={intl.formatMessage({ id: "application.title" })} showMore />
       <Grid container>
         <ApplicationItem to="/services" title={intl.formatMessage({ id: "application.desc_one" })} image={data.imgOne.childImageSharp.fixed.src} />
         <ApplicationItem to="/services" title={intl.formatMessage({ id: "application.desc_two" })} image={data.imgTwo.childImageSharp.fixed.src} />
         <ApplicationItem to="/services" title={intl.formatMessage({ id: "application.desc_three" })} image={data.imgThree.childImageSharp.fixed.src} />
       </Grid>
-    </div>
+    </Container>
   )
 }
 

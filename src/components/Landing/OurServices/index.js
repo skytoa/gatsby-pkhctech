@@ -1,5 +1,6 @@
 import React from 'react';
 import { 
+  Container,
   Grid,
   makeStyles,
   useMediaQuery,
@@ -90,7 +91,7 @@ const LandingOurServices = () => {
   }
 
   return (
-    <>
+    <Container maxWidth="lg">
       <HeaderTitle to="/services" title={intl.formatMessage({ id: "our_service.title" })} showMore />
       <div className={classes.root}>
         <Grid container spacing={3} alignItems="center" className={classes.factor}>
@@ -116,7 +117,7 @@ const LandingOurServices = () => {
           </Grid>
         </Grid>
       </div>
-    </>
+    </Container>
   )
 }
 

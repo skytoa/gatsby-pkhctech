@@ -9,7 +9,6 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Container from '@material-ui/core/Container';
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import AppThemeOptions from "./theme";
 import { AppTheme } from "../modules/constants";
@@ -45,9 +44,7 @@ const Layout = ({ children }) => {
         <CssBaseline />
         <AppBar onThemeTypeSwitch={toggleTheme}/>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <Container maxWidth="lg">
           <main>{children}</main>
-        </Container>
         <Footer />
       </MuiThemeProvider>
     </>

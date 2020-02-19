@@ -1,6 +1,6 @@
 import React from 'react';
 import { HeaderTitle } from '../../Typography';
-import { makeStyles, Grid } from '@material-ui/core';
+import { makeStyles, Grid, Container } from '@material-ui/core';
 import { useIntl } from "gatsby-plugin-intl";
 import { useStaticQuery, graphql } from "gatsby";
 import ClientsItem from './ClientsItem';
@@ -65,7 +65,7 @@ const LandingClients = () => {
   `)
 
   return (
-    <div className={classes.root}>
+    <Container maxWidth="lg" className={classes.root}>
       <HeaderTitle to="/" title={intl.formatMessage({ id: "our_clients.title" })} />
       <Grid container alignItems="center" justify="center">
         <ClientsItem
@@ -84,7 +84,7 @@ const LandingClients = () => {
           to={data.wordpressPage.acf.brand_3.link}
         />
       </Grid>
-    </div>
+    </Container>
   )
 }
 
