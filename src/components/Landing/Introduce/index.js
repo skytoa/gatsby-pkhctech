@@ -6,21 +6,22 @@ import RequestForm from '../../RequestForm';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    flexGrow: 1,
-    marginBottom: '60px',
+    alignItems: 'center',
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center',
+    flexGrow: 1,
+    marginBottom: '60px',
     position: 'relative',
     
     '&::before': {
-      content: "''",
-      position: 'absolute',
       background: `url(${IntroduceBg}) no-repeat top center`,
       backgroundSize: '100%',
+      content: "''",
+      height: '100%',
+      opacity: 0.4,
+      position: 'absolute',
       top: 0,
       width: '100%',
-      height: '100%',
       zIndex: -1,
     }
   },
@@ -38,17 +39,17 @@ const useStyles = makeStyles(theme => ({
     lineHeight: '50px',
     margin: '0',
     textAlign: 'center',
-    width: '700px',
     textShadow: '0 3px 6px rgba(0, 0, 0, 0.1)',
+    width: '700px',
 
     [theme.breakpoints.down('sm')]: {
       width: '100%',
     },
   },
   contact: {
+    alignItems: 'flex-end',
     display: 'flex',
     flexDirection: 'row',
-    alignItems: 'flex-end',
     justifyContent: 'center',
   },
   contact__box: {

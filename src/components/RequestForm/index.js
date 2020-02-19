@@ -10,7 +10,7 @@ const useStyles = makeStyles(theme => ({
     width: '622px',
     height: '297px',
     display: 'flex',
-    padding: '45px 0 0',
+    padding: '45px 10px 0',
     margin: '0 0 0 -3px',
     position: 'relative',
     boxShadow: '-25px -5px 79px rgba(0, 0, 0, 0.3)',
