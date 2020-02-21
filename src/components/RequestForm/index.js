@@ -3,10 +3,11 @@ import { makeStyles, TextField } from '@material-ui/core';
 import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 import { FormattedMessage } from "gatsby-plugin-intl";
 import { AniLink } from '../TransitionLink';
+import { APP_THEME } from '../../types/theme'
 
 const useStyles = makeStyles(theme => ({
   root: {
-    background: theme.palette.type === "light" ? '#fff' : `${theme.palette.background.secondary}`,
+    background: theme.palette.type === APP_THEME.LIGHT ? '#fff' : `${theme.palette.background.secondary}`,
     width: '100%',
     height: '297px',
     display: 'flex',

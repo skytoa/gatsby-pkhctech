@@ -1,8 +1,9 @@
 import React from "react"
 // import PropTypes from "prop-types"
 import { makeStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
-import Grid from '@material-ui/core/Grid';
+import { Container, Grid } from '@material-ui/core';
+import { APP_THEME } from '../types/theme';
+
 import {
   FooterAddress,
   FooterCopyright,
@@ -14,8 +15,8 @@ import FollowUs from '../components/FollowUs';
 const useStyles = makeStyles(theme => ({
   footer: {
     background: theme.palette.primary,
-    borderTop: `10px solid ${theme.palette.type === "light" ? '#F2F2F4' : `${theme.palette.background.secondary}`}`,
-    borderBottom: `10px solid ${theme.palette.type === "light" ? '#F2F2F4' : `${theme.palette.background.secondary}`}`,
+    borderTop: `10px solid ${theme.palette.type === APP_THEME.LIGHT ? '#F2F2F4' : `${theme.palette.background.secondary}`}`,
+    borderBottom: `10px solid ${theme.palette.type === APP_THEME.LIGHT ? '#F2F2F4' : `${theme.palette.background.secondary}`}`,
     padding: '10px',
     overflow: 'hidden',
   },
@@ -23,7 +24,7 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
   },
   right: {
-    background: theme.palette.type === "light" ? '#F2F2F4' : `${theme.palette.background.secondary}`,
+    background: theme.palette.type === APP_THEME.LIGHT ? '#F2F2F4' : `${theme.palette.background.secondary}`,
     position: 'relative',
     justifyContent: 'flex-end',
 
@@ -42,7 +43,7 @@ const useStyles = makeStyles(theme => ({
       height: 0,
       width: 0,
       position: "absolute",
-      borderBottom: `320px solid ${theme.palette.type === "light" ? '#F2F2F4' : `${theme.palette.background.secondary}`}`,
+      borderBottom: `320px solid ${theme.palette.type === APP_THEME.LIGHT ? '#F2F2F4' : `${theme.palette.background.secondary}`}`,
       borderLeft: '100px solid transparent',
     },
 
@@ -53,7 +54,7 @@ const useStyles = makeStyles(theme => ({
       height: '100%',
       width: '100vh',
       position: "absolute",
-      background: theme.palette.type === "light" ? '#F2F2F4' : `${theme.palette.background.secondary}`,
+      background: theme.palette.type === APP_THEME.LIGHT ? '#F2F2F4' : `${theme.palette.background.secondary}`,
     },
 
   },

@@ -1,10 +1,10 @@
-import { AppTheme } from '../modules/constants';
+import { APP_THEME } from '../types/theme';
 import { grey, red } from "@material-ui/core/colors";
 
 const appThemeOptions = {
-  [AppTheme.LIGHT]: {
+  [APP_THEME.LIGHT]: {
     palette: {
-      type: 'light',
+      type: APP_THEME.LIGHT,
       primary: {
         light: red[200],
         main: '#fff',
@@ -21,9 +21,9 @@ const appThemeOptions = {
       }
     },
   },
-  [AppTheme.DARK]: {
+  [APP_THEME.DARK]: {
     palette: {
-      type: 'dark',
+      type: APP_THEME.DARK,
       primary: {
         light: grey[200],
         main: '#222',

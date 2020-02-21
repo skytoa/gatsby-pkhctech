@@ -11,7 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import AppThemeOptions from "./theme";
-import { AppTheme } from "../modules/constants";
+import { APP_THEME } from "../types/theme";
 
 import Header from "./Header";
 import AppBar from './AppBar';
@@ -20,10 +20,10 @@ import Footer from './Footer';
 import '../css/typography.css';
 
 const Layout = ({ children }) => {
-  const [theme, setTheme] = React.useState(AppTheme.LIGHT);
+  const [theme, setTheme] = React.useState(APP_THEME.LIGHT);
 
   const toggleTheme = () => {
-    setTheme(theme === AppTheme.LIGHT ? AppTheme.DARK: AppTheme.LIGHT)
+    setTheme(theme === APP_THEME.LIGHT ? APP_THEME.DARK: APP_THEME.LIGHT)
   }
 
   const muiTheme = createMuiTheme(AppThemeOptions[theme]);

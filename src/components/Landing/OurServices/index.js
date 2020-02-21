@@ -6,6 +6,7 @@ import {
   useMediaQuery,
   useTheme,
 } from '@material-ui/core';
+import { APP_THEME } from '../../../types/theme';
 import { HeaderTitle } from '../../Typography';
 import { removeLineBreak } from '../../../utilities/lineBreak';
 import { useIntl } from "gatsby-plugin-intl";
@@ -17,7 +18,7 @@ import servicesBgLight from '../../../images/services/services_bg_light.svg';
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
-    background: theme.palette.type === "light" ? `url(${servicesBgLight})` : `url(${servicesBgDark})`,
+    background: theme.palette.type === APP_THEME.LIGHT ? `url(${servicesBgLight})` : `url(${servicesBgDark})`,
   },
   paper: {
     padding: theme.spacing(2),

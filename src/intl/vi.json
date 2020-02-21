@@ -15,6 +15,11 @@
     "header": "Khong tim thay",
     "description": "You just hit a route that doesn't exist... the sadness."
   },
+  "language": {
+    "current": "Tiếng Việt",
+    "en": "English",
+    "vi": "Tiếng Việt"
+  },
   "introduce": "Giới thiệu",
   "address": "Địa chỉ",
   "office": "Văn phòng",

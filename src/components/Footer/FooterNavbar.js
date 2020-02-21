@@ -1,7 +1,7 @@
 import React from 'react';
 import { FormattedMessage } from 'gatsby-plugin-intl';
 import { makeStyles } from '@material-ui/core/styles';
-import { NAVIGATION } from '../../modules/constants';
+import { NAVIGATION } from '../../types/navigation';
 import { AniLink } from '../TransitionLink';
 
 const useStyles = makeStyles(theme => ({

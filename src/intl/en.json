@@ -15,6 +15,11 @@
     "header": "NOT FOUND",
     "description": "You just hit a route that doesn't exist... the sadness."
   },
+  "language": {
+    "current": "English",
+    "en": "English",
+    "vi": "Vietnamese"
+  },
   "introduce": "Introduce",
   "address": "Address",
   "office": "Office",

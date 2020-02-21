@@ -1,16 +1,17 @@
 import React from 'react';
 import { IntlContextConsumer, changeLocale, FormattedMessage } from "gatsby-plugin-intl";
-import { LANGUAGE_EN, LANGUAGE_VI } from '../modules/constants';
+import { LANGUAGE } from '../types/language';
 import { makeStyles } from '@material-ui/core/styles';
+import { useIntl } from "gatsby-plugin-intl";
 import Button from '@material-ui/core/Button';
 import ClickAwayListener from '@material-ui/core/ClickAwayListener';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Grow from '@material-ui/core/Grow';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
 import Paper from '@material-ui/core/Paper';
 import Popper from '@material-ui/core/Popper';
 import TranslateIcon from '@material-ui/icons/Translate';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -24,12 +25,8 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const languageName = {
-  en: LANGUAGE_EN,
-  vi: LANGUAGE_VI,
-}
-
 const ChangeLanguage = () => {
+  const intl = useIntl();
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
@@ -75,7 +72,7 @@ const ChangeLanguage = () => {
           startIcon={<TranslateIcon />}
           endIcon={<ExpandMoreIcon />}
         >
-          <FormattedMessage id="current_language" />
+          <FormattedMessage id="language.current" />
         </Button>
         <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
           {({ TransitionProps, placement }) => (
@@ -94,7 +91,7 @@ const ChangeLanguage = () => {
                             onClick={() => changeLocale(language)}
                             selected={ currentLocale === language }
                           >
-                            {languageName[language]}
+                            {intl.formatMessage({ id: LANGUAGE[language].name })}
                           </MenuItem>
                         ))
                       }

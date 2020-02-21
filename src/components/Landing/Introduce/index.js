@@ -3,6 +3,7 @@ import { useIntl } from "gatsby-plugin-intl";
 import { makeStyles, Container } from '@material-ui/core';
 import IntroduceBg from '../../../images/introduce_bg.png';
 import RequestForm from '../../RequestForm';
+import { APP_THEME } from '../../../types/theme';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -94,7 +95,7 @@ const useStyles = makeStyles(theme => ({
     fill: '#2f2e41',
   },
   cls_5: {
-    fill: theme.palette.type === "light" ? '#fff' : `${theme.palette.background.secondary}`,
+    fill: theme.palette.type === APP_THEME.LIGHT ? '#fff' : `${theme.palette.background.secondary}`,
   }
 }));
 
