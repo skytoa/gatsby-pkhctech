@@ -24,13 +24,13 @@ const useStyles = makeStyles(theme => ({
 
     '&:hover': {
       '& span': {
-        color: '#009FD4',
+        color: '#2AA7DE',
       }
     },
     
     '& span': {
       transition: 'all .3s ease-in-out',
-      color: '#2AA7DE',
+      color: '#009FD4',
     }
   },
   view_more: {
