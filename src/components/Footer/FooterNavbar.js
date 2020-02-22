@@ -46,11 +46,9 @@ const FooterNavbar = () => {
   }
 
   return (
-    <>
-      <ul className={classes.navbar} >
-        { renderMenuLinks(NAVIGATION) }
-      </ul>
-    </>
+    <ul className={classes.navbar} >
+      { renderMenuLinks(NAVIGATION) }
+    </ul>
   )
 }
 

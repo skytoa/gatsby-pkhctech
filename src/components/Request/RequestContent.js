@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles, TextField } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core';
 import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 import { FormattedMessage } from "gatsby-plugin-intl";
 import { AniLink } from '../TransitionLink';
@@ -11,9 +11,12 @@ const useStyles = makeStyles(theme => ({
     width: '100%',
     height: '297px',
     display: 'flex',
-    padding: '45px 10px 0',
+    padding: '16px 10px 0',
     margin: '0 0 6px -2px',
     boxShadow: '90px 0 79px rgba(0, 0, 0, 0.1)',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'column',
 
     [theme.breakpoints.down('sm')]: {
       marginTop: '66px',
@@ -28,7 +31,7 @@ const useStyles = makeStyles(theme => ({
       position: 'absolute',
       background: 'linear-gradient(200deg, #663399, #2AA7DE)',
       width: '90%',
-      height: '220px',
+      height: '200px',
       top: '140px',
       right: '0',
       zIndex: -1,
@@ -39,89 +42,79 @@ const useStyles = makeStyles(theme => ({
       },
     }
   },
-  left: {
-    width: '70%',
-
-    [theme.breakpoints.down('sm')]: {
-      width: '100%',
-    },
-  },
   button: {
-    width: '30%',
+    background: theme.palette.background.default,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    flexDirection: 'column',
     textDecoration: 'none',
-    transition: 'color .3s ease',
+    transition: 'all .3s ease',
+    padding: '0 32px',
+    border: `1px solid ${theme.palette.text.primary}`,
     color: theme.palette.text.primary,
+    marginLeft: '-60px',
 
     [theme.breakpoints.down('sm')]: {
-      flexDirection: 'row',
-      width: '100%',
+      marginLeft: '0',
     },
 
     '&:hover': {
-      color: theme.palette.background.secondary
+      background: 'linear-gradient(200deg, #2AA7DE, #663399)',
+      color: '#fff',
+
+      '& svg': {
+        transform: 'translateX(16px)',
+      }
     }
+
   },
   button__paragraph: {
     fontSize: '1.3em',
+    lineHeight: '1',
+    marginRight: theme.spacing(1),
+    
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '1.2em',
+    },
   },
   title: {
     fontFamily: 'SVN Aguda',
-    fontSize: '26px',
+    fontSize: '36px',
     fontWeight: 'bold',
-    lineHeight: '50px',
-    margin: '0 0 30px',
+    lineHeight: '60px',
+    margin: '0 0 30px -60px',
+    textAlign: 'center',
 
     [theme.breakpoints.down('sm')]: {
-      fontSize: '18px',
+      fontSize: '1.2em',
       lineHeight: '38px',
+      marginLeft: 0,
     },
   },
-  resize: {
-    fontSize: '26px'
-  },
-  textField: {
-    fontSize: '26px',
-    width: '100%',
-  },
-
+  arrow: {
+    transform: 'translateX(0)',
+    transition: 'transform 0.3s ease',
+  }
 }));
 
 
-const RequestForm = ({ title }) => {
+const RequestContent = ({ title }) => {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <div className={classes.left}>
-        <h4
-          className={classes.title}
-          dangerouslySetInnerHTML={{ __html: title }}
-        />
-        <TextField
-          id="request"
-          label="name@email.com"
-          InputProps={{
-            classes: {
-              input: classes.resize,
-            },
-          }}
-          color="secondary"
-          className={classes.textField}
-          margin="normal"
-        />
-      </div>
+      <p
+        className={classes.title}
+        dangerouslySetInnerHTML={{ __html: title }}
+      />
       <AniLink to="/contact" className={classes.button}>
-        <ArrowRightAltIcon style={{ fontSize: '80px' }} />
         <p className={classes.button__paragraph}>
           <FormattedMessage id="contact_us" />
         </p>
+        <ArrowRightAltIcon className={classes.arrow} />
       </AniLink>
     </div>
   )
 }
 
-export default RequestForm;
+export default RequestContent;
