@@ -61,11 +61,11 @@ const LandingIntroduce = () => {
 
   return (
     <div className={classes.root}>
-      <h2 className={classes.title}>PKH Technologies</h2>
+      <h2 className={classes.title}>{intl.formatMessage({ id: "title" })}</h2>
       <p className={classes.paragraph}>
-        The company operates in the field of electronic circuit design, embedded system programming, software development for automatic control systems on PLC equipment in industry, developing SCADA systems.
+        {intl.formatMessage({ id: "description" })}
       </p>
-      <Request title={intl.formatMessage({ id: "request_form_title" })} />
+      <Request title={intl.formatMessage({ id: "request_title" })} />
     </div>
   )
 }

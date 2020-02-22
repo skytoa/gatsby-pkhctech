@@ -13,7 +13,6 @@ const PostPage = ({ data }) => {
         <SEO
           title={intl.formatMessage({ id: "title" })}
         />
-        <h1><FormattedMessage id="welcome" /></h1>
         <div>
           <h1>Pages</h1>
           {data.allWordpressPage.edges.map(({ node }) => (

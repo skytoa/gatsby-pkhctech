@@ -1,14 +1,10 @@
 {
-  "current_language": "English",
-  "title": "PKH Technologies - We Make It Simple",
-  "description": "Kick off your next, great Gatsby project with this default-starter-intl. This barebones starter ships with the main Gatsby configuration files you might need.",
-  "author": "@hoangbaovu",
-  "hello": "Hi people",
-  "welcome": "Welcome to your new Gatsby site.",
+  "title": "PKH Technologies",
+  "slogan": "We Make It Simple",
+  "description": "The company operates in the field of electronic circuit design, embedded system programming, software development for automatic control systems on PLC equipment in industry, developing SCADA systems.",
   "title_page2": "Page two",
   "hello_page2": "Hi from the second page",
   "go_page2": "Go to page 2",
-  "build": "Now go build something great.",
   "welcome_page2": "Welcome to page 2",
   "go_back": "Go back to the homepage",
   "notfound": {
@@ -54,5 +50,5 @@
     "title": "Our <span>Clients</span>"
   },
   "contact_us": "Contact Us",
-  "request_form_title": "We love to collaborate with great minds.<br />Let’s open new possibilities together!"
+  "request_title": "We love to collaborate with great minds.<br />Let’s open new possibilities together!"
 }

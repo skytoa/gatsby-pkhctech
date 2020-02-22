@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `PKH Technologies - We Make It Simple`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `The company operates in the field of electronic circuit design, embedded system programming, software development for automatic control systems on PLC equipment in industry, developing SCADA systems.`,
     author: `@hoangbaovu`
   },
   plugins: [

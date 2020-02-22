@@ -1,14 +1,10 @@
 {
-  "current_language": "Tiếng Việt",
-  "title": "PKH Technologies - We Make It Simple",
-  "description": "Kick off your next, great Gatsby project with this default-starter-intl. This barebones starter ships with the main Gatsby configuration files you might need.",
-  "author": "@hoangbaovu",
-  "hello": "Hi people",
-  "welcome": "Chào mừng đến với trang web Gatsby mới",
+  "title": "PKH Technologies",
+  "slogan": "We Make It Simple",
+  "description": "Công ty hoạt động trong lĩnh vực thiết kế mạch điện tử, lập trình hệ thống nhúng, phát triển phần mềm cho các hệ thống điều khiển tự động trên thiết bị PLC trong công nghiệp, phát triển hệ thống SCADA.",
   "title_page2": "Trang 2",
   "hello_page2": "Chào trang 2",
   "go_page2": "Đến trang 2",
-  "build": "Now go build something great.",
   "welcome_page2": "Chào trang 2",
   "go_back": "Quay lại trang chủ",
   "notfound": {
@@ -54,5 +50,5 @@
     "title": "<span>Đối tác</span> của chúng tôi"
   },
   "contact_us": "Liên hệ chúng tôi",
-  "request_form_title": "Chúng tôi thích hợp tác với những bộ óc tuyệt vời.<br />Hãy cùng nhau mở những tiềm năng mới!"
+  "request_title": "Chúng tôi thích hợp tác với những bộ óc tuyệt vời.<br />Hãy cùng nhau mở những tiềm năng mới!"
 }
