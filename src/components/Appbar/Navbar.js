@@ -5,10 +5,6 @@ import { NAVIGATION } from '../../types/navigation';
 import { AniLink } from '../TransitionLink';
 
 const useStyles = makeStyles(theme => ({
-  root: {
-    overflow: 'hidden',
-    height: '33px',
-  },
   link: {
     color: theme.palette.text.primary,
     fontFamily: 'Roboto',
@@ -20,23 +16,8 @@ const useStyles = makeStyles(theme => ({
     transition: 'all .3s',
     position: 'relative',
 
-    '&::after': {
-      content: "''",
-      position: 'absolute',
-      bottom: '-10px',
-      left: 0,
-      background: `${theme.palette.text.primary}`,
-      height: '3px',
-      width: '100%',
-      opacity: 1,
-      transform: 'translateX(-100px)',
-      transition: 'all .3s ease-in-out',
-    },
-
     '&:hover': {
-      '&::after': {
-        transform: 'translateX(0)',
-      }
+      color: '#009FD4',
     }
   },
   navbar: {
@@ -49,12 +30,8 @@ const useStyles = makeStyles(theme => ({
     },
   },
   active: {
-    color: theme.palette.text.primary,
-    
-    '&::after': {
-      opacity: 1,
-      transform: 'translateX(0)',
-    }
+    color: '#009FD4',
+    fontWeight: 'bold',
   }
 }));
 
@@ -64,7 +41,7 @@ const Navbar = ({ ...rest }) => {
   const renderMenuLinks = data => {
     return data.map(item => {
       return (
-        <li key={item.name} className={classes.root}>
+        <li key={item.name}>
           <AniLink
             className={classes.link}
             to={item.link}
