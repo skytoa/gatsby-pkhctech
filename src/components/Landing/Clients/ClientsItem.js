@@ -2,16 +2,20 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core';
 import Img from "gatsby-image";
+import { APP_THEME } from '../../../types/theme';
 
 const useStyles = makeStyles(theme => ({
   root: {
     textAlign: 'center',
   },
   link: {
-    transition: 'opacity .3s ease',
+    transition: 'all .3s ease',
+    filter: theme.palette.type === APP_THEME.LIGHT ? 'grayscale(0)' : 'grayscale(100%)',
+
     '&:hover': {
-      opacity: 0.8,
-    }
+      opacity: theme.palette.type === APP_THEME.LIGHT ? '0.8' : '1',
+      filter: 'none',
+    },
   }
 }));
 
