@@ -3,7 +3,7 @@ import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import { useIntl, FormattedMessage } from "gatsby-plugin-intl";
 
-const useStyles = makeStyles(theme => ({
+const useStylesFooterAddressItem = makeStyles(theme => ({
   title: {
     fontSize: '20px',
     fontWeight: 'bold',
@@ -17,8 +17,16 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
+const useStylesFooterAddress = makeStyles(theme => ({
+  root: {
+    [theme.breakpoints.down('sm')]: {
+      marginTop: '36px',
+    },
+  },
+}));
+
 const FooterAddressItem = ({ title, content, col = 3}) => {
-  const classes = useStyles();
+  const classes = useStylesFooterAddressItem();
 
   return (
     <Grid item xs={12} sm={col}>
@@ -30,9 +38,10 @@ const FooterAddressItem = ({ title, content, col = 3}) => {
 
 const FooterAddress = () => {
   const intl = useIntl();
+  const classes = useStylesFooterAddress();
   
   return (
-    <Grid container>
+    <Grid container className={classes.root}>
       <FooterAddressItem
         title={<FormattedMessage id="address" />}
         content={intl.formatMessage({ id: "company.address" })}

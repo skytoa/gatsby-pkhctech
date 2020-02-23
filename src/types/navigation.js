@@ -17,14 +17,14 @@ export const NAVIGATION = [
   },
   {
     name:'navigation.careers',
-    link:'/page-2',
+    link:'/careers',
   },
   {
     name:'navigation.about_us',
-    link:'/page-2',
+    link:'/about-us',
   },
   {
-    name:'navigation.contact',
-    link:'/page-2',
+    name:'navigation.contact_us',
+    link:'/contact',
   }
 ]

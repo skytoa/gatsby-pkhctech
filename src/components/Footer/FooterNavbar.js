@@ -11,7 +11,14 @@ const useStyles = makeStyles(theme => ({
     fontSize: '18px',
     marginRight: '20px',
     textDecoration: 'none',
-    textTransform: 'uppercase'
+    textTransform: 'uppercase',
+    marginBottom: '5px',
+    borderBottom: '3px solid transparent',
+    transition: 'all .3s',
+
+    '&:hover': {
+      borderBottom: `3px solid ${theme.palette.text.primary}`,
+    }
   },
   navbar: {
     display: 'flex',
@@ -19,14 +26,19 @@ const useStyles = makeStyles(theme => ({
     listStyle: 'none',
     padding: 0,
     marginTop: '26px',
-    marginBottom: '36px'
+    marginBottom: '36px',
+
+    [theme.breakpoints.down('sm')]: {
+      display: 'none',
+    },
   },
   active: {
-    color: theme.palette.text.primary
+    color: theme.palette.text.primary,
+    borderBottom: `3px solid ${theme.palette.text.primary}`
   }
 }));
 
-const FooterNavbar = () => {
+const FooterNavbar = ({ ...rest }) => {
   const classes = useStyles();
 
   const renderMenuLinks = data => {
@@ -46,7 +58,7 @@ const FooterNavbar = () => {
   }
 
   return (
-    <ul className={classes.navbar} >
+    <ul {...rest} className={classes.navbar} >
       { renderMenuLinks(NAVIGATION) }
     </ul>
   )

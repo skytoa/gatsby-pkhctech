@@ -14,14 +14,11 @@ import FollowUs from '../components/FollowUs';
 
 const useStyles = makeStyles(theme => ({
   footer: {
-    background: theme.palette.primary,
+    background: theme.palette.background.default,
     borderTop: `10px solid ${theme.palette.type === APP_THEME.LIGHT ? '#F2F2F4' : `${theme.palette.background.secondary}`}`,
     borderBottom: `10px solid ${theme.palette.type === APP_THEME.LIGHT ? '#F2F2F4' : `${theme.palette.background.secondary}`}`,
     padding: '10px',
     overflow: 'hidden',
-  },
-  root: {
-    flexGrow: 1,
   },
   right: {
     background: theme.palette.type === APP_THEME.LIGHT ? '#F2F2F4' : `${theme.palette.background.secondary}`,
@@ -30,6 +27,8 @@ const useStyles = makeStyles(theme => ({
 
     [theme.breakpoints.between('xs', 'sm')]: {
       justifyContent: 'space-around',
+      height: '230px',
+      paddingTop: '24px !important',
     },
 
     [theme.breakpoints.only('md')]: {
@@ -45,6 +44,10 @@ const useStyles = makeStyles(theme => ({
       position: "absolute",
       borderBottom: `320px solid ${theme.palette.type === APP_THEME.LIGHT ? '#F2F2F4' : `${theme.palette.background.secondary}`}`,
       borderLeft: '100px solid transparent',
+
+      [theme.breakpoints.down('md')]: {
+        borderLeftColor: theme.palette.type === APP_THEME.LIGHT ? '#F2F2F4' : theme.palette.background.secondary,
+      },
     },
 
     '&::after': {
