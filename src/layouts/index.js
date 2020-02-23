@@ -7,13 +7,12 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+// import { useStaticQuery, graphql } from "gatsby"
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import AppThemeOptions from "./theme";
 import { APP_THEME } from "../types/theme";
 
-import Header from "./Header";
 import AppBar from './AppBar';
 import Footer from './Footer';
 
@@ -28,23 +27,22 @@ const Layout = ({ children }) => {
 
   const muiTheme = createMuiTheme(AppThemeOptions[theme]);
 
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+  // const data = useStaticQuery(graphql`
+  //   query SiteTitleQuery {
+  //     site {
+  //       siteMetadata {
+  //         title
+  //       }
+  //     }
+  //   }
+  // `)
 
   return (
     <>
       <MuiThemeProvider theme={muiTheme}>
         <CssBaseline />
-        <AppBar onThemeTypeSwitch={toggleTheme}/>
-        <Header siteTitle={data.site.siteMetadata.title} />
-          <main>{children}</main>
+        <AppBar onThemeTypeSwitch={toggleTheme} />
+        <main>{children}</main>
         <Footer />
       </MuiThemeProvider>
     </>

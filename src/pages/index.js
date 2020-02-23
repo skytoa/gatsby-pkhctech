@@ -7,6 +7,7 @@ import {
   LandingClients,
   LandingIntroduce,
   LandingOurServices,
+  LandingParticles,
 } from '../components/Landing';
 
 const IndexPage = () => {
@@ -17,6 +18,7 @@ const IndexPage = () => {
       <SEO
         title={intl.formatMessage({ id: "introduce" })}
       />
+      <LandingParticles />
       <LandingOurServices />
       <LandingApplication />
       <LandingClients />
