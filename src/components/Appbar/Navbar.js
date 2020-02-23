@@ -12,9 +12,12 @@ const useStyles = makeStyles(theme => ({
     marginRight: '30px',
     textDecoration: 'none',
     textTransform: 'uppercase',
-    marginBottom: '5px',
     transition: 'all .3s',
     position: 'relative',
+
+    [theme.breakpoints.down('md')]: {
+      marginRight: '10px',
+    },
 
     '&:hover': {
       color: '#009FD4',
@@ -27,6 +30,10 @@ const useStyles = makeStyles(theme => ({
 
     [theme.breakpoints.down('sm')]: {
       display: 'none',
+    },
+
+    [theme.breakpoints.down('md')]: {
+      padding: '0 0 0 10px',
     },
   },
   active: {

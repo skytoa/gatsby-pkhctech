@@ -23,7 +23,7 @@ const ClientsItem = ({ to, name, image }) => {
   const classes = useStyles();
 
   return (
-    <Grid item xs={12} sm={12} md={4} className={classes.root}>
+    <Grid item xs={12} sm={6} md={4} className={classes.root}>
       <a
         aria-label={name}
         className={classes.link}
