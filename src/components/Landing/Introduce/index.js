@@ -41,6 +41,7 @@ const useStyles = makeStyles(theme => ({
     textAlign: 'center',
     textShadow: '0 3px 6px rgba(0, 0, 0, 0.1)',
     width: '700px',
+    padding: theme.spacing(2),
 
     [theme.breakpoints.down('sm')]: {
       width: '100%',

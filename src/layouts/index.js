@@ -13,7 +13,7 @@ import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import AppThemeOptions from "./theme";
 import { APP_THEME } from "../types/theme";
 
-import AppBar from './AppBar';
+import AppBar from '../components/Appbar';
 import Footer from './Footer';
 
 import '../css/typography.css';

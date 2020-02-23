@@ -1,12 +1,13 @@
 import React from "react";
 import { makeStyles, Switch } from "@material-ui/core";
 import AppBar from "@material-ui/core/AppBar";
-import ChangeLanguage from '../components/ChangeLanguage';
+import ChangeLanguage from '../../components/ChangeLanguage';
 import Container from '@material-ui/core/Container';
 import Toolbar from "@material-ui/core/Toolbar";
 // import Typography from "@material-ui/core/Typography";
-import LogoColor from '../images/logo_color.png';
-import { AniLink } from '../components/TransitionLink';
+import LogoColor from '../../images/logo_color.png';
+import { AniLink } from '../../components/TransitionLink';
+import Navbar from './Navbar';
 
 const useStyles = makeStyles(theme => ({
   titlebar: {
@@ -43,6 +44,9 @@ export default ({onThemeTypeSwitch}) => {
           <AniLink to="/">
             <img src={LogoColor} alt="Logo" className={classes.logo} />
           </AniLink>
+          <div>
+            <Navbar />
+          </div>
           <div className={classes.right}>
             <ChangeLanguage />
             <Switch onChange={handleChange}/>
