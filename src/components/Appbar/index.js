@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles, Switch } from "@material-ui/core";
 import AppBar from "@material-ui/core/AppBar";
 import ChangeLanguage from '../../components/ChangeLanguage';
@@ -8,6 +8,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import LogoColor from '../../images/logo_color.png';
 import { AniLink } from '../../components/TransitionLink';
 import Navbar from './Navbar';
+import { HamburgerMenu } from "../HamburgerMenu";
 
 const useStyles = makeStyles(theme => ({
   titlebar: {
@@ -30,11 +31,16 @@ const useStyles = makeStyles(theme => ({
 
 export default ({onThemeTypeSwitch}) => {
   const classes = useStyles();
-  const [themeType, setThemeType] = React.useState(false);
+  const [isNavVisible, setNavVisibility] = useState(false);
+  const [themeType, setThemeType] = useState(false);
 
   const handleChange = e => {
     setThemeType(!themeType);
     onThemeTypeSwitch();
+  };
+
+  const toggleNav = () => {
+    setNavVisibility(!isNavVisible);
   };
 
   return (
@@ -50,6 +56,7 @@ export default ({onThemeTypeSwitch}) => {
           <div className={classes.right}>
             <ChangeLanguage />
             <Switch onChange={handleChange}/>
+            <HamburgerMenu toggle={toggleNav} visible={isNavVisible} />
           </div>
         </Toolbar>
       </Container>
