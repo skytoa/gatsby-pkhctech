@@ -9,8 +9,13 @@ import LogoColor from '../../images/logo_color.png';
 import { AniLink } from '../../components/TransitionLink';
 import Navbar from './Navbar';
 import { HamburgerMenu } from "../HamburgerMenu";
+import { CSSTransition } from 'react-transition-group';
+import './navbar.css';
 
 const useStyles = makeStyles(theme => ({
+  root: {
+    height: '70px',
+  },
   titlebar: {
     flexGrow: 1,
     padding: '0',
@@ -22,15 +27,16 @@ const useStyles = makeStyles(theme => ({
   logo: {
     height: '50px',
     marginTop: '6px',
-    
+
     '&:hover': {
       opacity: .8,
     }
   }
 }));
 
-export default ({onThemeTypeSwitch}) => {
+export default ({ onThemeTypeSwitch }) => {
   const classes = useStyles();
+
   const [isNavVisible, setNavVisibility] = useState(false);
   const [themeType, setThemeType] = useState(false);
 
@@ -44,15 +50,19 @@ export default ({onThemeTypeSwitch}) => {
   };
 
   return (
-    <AppBar position="fixed" color="primary">
+    <AppBar position="fixed" color="primary" className={classes.root}>
       <Container maxWidth="lg">
         <Toolbar className={classes.titlebar}>
           <AniLink to="/">
             <img src={LogoColor} alt="Logo" className={classes.logo} />
           </AniLink>
-          <div>
-            <Navbar />
-          </div>
+          <CSSTransition
+            in={isNavVisible}
+            timeout={350}
+            classNames="NavAnimation"
+          >
+            <Navbar visible={isNavVisible} />
+          </CSSTransition>
           <div className={classes.right}>
             <ChangeLanguage />
             <Switch onChange={handleChange}/>
