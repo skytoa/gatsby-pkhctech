@@ -49,8 +49,6 @@ const useStyles = makeStyles(theme => ({
     }
   },
   navClose: {
-    
-
     '@media (max-width: 1280px)': {
       display: 'none',
       backgroundColor: '#fff',
