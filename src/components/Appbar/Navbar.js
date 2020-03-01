@@ -3,6 +3,7 @@ import { FormattedMessage } from 'gatsby-plugin-intl';
 import { makeStyles } from '@material-ui/core';
 import { NAVIGATION } from '../../types/navigation';
 import { AniLink } from '../TransitionLink';
+import { APP_THEME } from '../../types/theme';
 
 const useStyles = makeStyles(theme => ({
   link: {
@@ -36,7 +37,7 @@ const useStyles = makeStyles(theme => ({
     display: 'flex !important',
 
     '@media (max-width: 1280px)': {
-      backgroundColor: '#fff',
+      backgroundColor: theme.palette.type === APP_THEME.LIGHT ? '#fff' : `${theme.palette.background.secondary}`,
       flexDirection: 'column !important',
       position: 'fixed',
       top: '48px',
@@ -51,7 +52,7 @@ const useStyles = makeStyles(theme => ({
   navClose: {
     '@media (max-width: 1280px)': {
       display: 'none',
-      backgroundColor: '#fff',
+      backgroundColor: theme.palette.type === APP_THEME.LIGHT ? '#fff' : `${theme.palette.background.secondary}`,
       flexDirection: 'column !important',
       position: 'fixed',
       top: '-110vh',
