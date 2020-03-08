@@ -8,7 +8,7 @@ const TransitionAniLink = ({ to, children, ...rest }) => {
   const link = intl.locale === LANGUAGE.en.key ? `${to}` : `/${intl.locale}${to}`;
 
   return (
-    <AniLink {...rest} cover bg="#663399" direction="right" to={link} duration={1}>
+    <AniLink {...rest} to={link} fade duration={0}>
       {children}
     </AniLink>
   )
