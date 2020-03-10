@@ -11,9 +11,9 @@ const useStyles = makeStyles(theme => ({
     border: 0,
     background: 'transparent',
 
-    '@media (min-width: 1280px)': {
+    [theme.breakpoints.up('lg')]: {
       display: 'none',
-    }
+    },
   },
   line: {
     background: '#009FD4',

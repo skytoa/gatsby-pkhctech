@@ -36,7 +36,7 @@ const useStyles = makeStyles(theme => ({
     opacity: '1',
     display: 'flex !important',
 
-    '@media (max-width: 1280px)': {
+    [theme.breakpoints.between('xs', 'md')]: {
       backgroundColor: theme.palette.type === APP_THEME.LIGHT ? '#fff' : `${theme.palette.background.secondary}`,
       flexDirection: 'column !important',
       position: 'fixed',
@@ -47,10 +47,10 @@ const useStyles = makeStyles(theme => ({
       alignItems: 'center',
       justifyContent: 'center',
       overflowY: 'hidden',
-    }
+    },
   },
   navClose: {
-    '@media (max-width: 1280px)': {
+    [theme.breakpoints.between('xs', 'md')]: {
       display: 'none',
       backgroundColor: theme.palette.type === APP_THEME.LIGHT ? '#fff' : `${theme.palette.background.secondary}`,
       flexDirection: 'column !important',
@@ -67,7 +67,7 @@ const useStyles = makeStyles(theme => ({
   liActive: {
     marginBottom: 'auto',
 
-    '@media (max-width: 1280px)': {
+    [theme.breakpoints.between('xs', 'md')]: {
       marginBottom: '30px',
 
       '& $link': {
@@ -76,7 +76,7 @@ const useStyles = makeStyles(theme => ({
     }
   },
   liClose: {
-    '@media (max-width: 1280px)': {
+    [theme.breakpoints.between('xs', 'md')]: {
       marginBottom: '30px',
 
       '& $link': {
