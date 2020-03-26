@@ -60,6 +60,14 @@ const ChangeLanguage = () => {
     prevOpen.current = open;
   }, [open]);
 
+  const handleChangeLocale = language => {
+    if(language === LANGUAGE['en'].key) {
+      changeLocale("")
+    } else {
+      changeLocale(language)
+    }
+  }
+
   return (
     <div className={classes.root}>
       <div>
@@ -84,16 +92,18 @@ const ChangeLanguage = () => {
                 <ClickAwayListener onClickAway={handleClose}>
                   <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
                     <IntlContextConsumer>
-                      {({ languages, language: currentLocale }) =>
-                        languages.map(language => (
-                          <MenuItem 
-                            key={language}
-                            onClick={() => changeLocale(language)}
-                            selected={ currentLocale === language }
-                          >
-                            {intl.formatMessage({ id: LANGUAGE[language].name })}
-                          </MenuItem>
-                        ))
+                      {({ languages, language: currentLocale }) => {
+                        return (
+                          languages.map(language => (
+                            <MenuItem 
+                              key={language}
+                              onClick={() => handleChangeLocale(language)}
+                              selected={ currentLocale === language }
+                            >
+                              {intl.formatMessage({ id: LANGUAGE[language].name })}
+                            </MenuItem>
+                          ))
+                        )}
                       }
                     </IntlContextConsumer>
                   </MenuList>
