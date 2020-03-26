@@ -32,7 +32,7 @@ const ParallelogramImg = ({type, image}) => {
   return (
     <Grid item xs={12} sm={12} md={5} className={classes.root}>
       <div className={classes.item}>
-      <Img fluid={image} key="12" className={classes.img} />
+      <Img fluid={image} className={classes.img} />
       </div>
     </Grid>
   )

@@ -50,5 +50,7 @@
     "title": "<span>Đối tác</span> của chúng tôi"
   },
   "contact_us": "Liên hệ chúng tôi",
-  "request_title": "Chúng tôi thích hợp tác với những bộ óc tuyệt vời.<br />Hãy cùng nhau mở những tiềm năng mới!"
+  "request_title": "Chúng tôi thích hợp tác với những bộ óc tuyệt vời.<br />Hãy cùng nhau mở những tiềm năng mới!",
+  "hardware_circuit_design": "Thiết kế mạch phần cứng",
+  "hardware_circuit_design_desc": "Chúng tôi thiết kế mạch điện tử & bố trí PCB theo yêu cầu trong nhiều lĩnh vực. Sau khi thiết kế PCB, chúng tôi có thể lập trình firmware theo yêu cầu. <br />Kinh nghiệm trong việc thiết kế và lập trình MCU, CPU ARM của TI, STM, AVR, PIC, Motorola trong các lĩnh vực analog và kỹ thuật số." 
 }

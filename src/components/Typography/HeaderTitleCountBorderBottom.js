@@ -8,16 +8,17 @@ const useStyles = makeStyles(theme => ({
   title: {
     marginBottom: '60px',
     marginTop: '100px',
-    fontSize: theme.typography.h3.fontSize,
+    fontSize: '2.9rem',
     paddingLeft: '97px',
     fontFamily: 'SVN Aguda',
 
     '&::before': {
       counterIncrement: 'service-counter',
       content: "counter(service-counter, decimal-leading-zero)",
-      fontSize: theme.typography.h2.fontSize,
+      fontSize: '5rem',
       position: 'absolute',
       left: 0,
+      top: '-39px',
     },
   },
 }));

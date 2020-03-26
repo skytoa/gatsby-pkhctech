@@ -1,6 +1,6 @@
 import React from "react"
 import { useIntl } from "gatsby-plugin-intl";
-import { 
+import {
   Container,
   Grid,
   makeStyles,
@@ -60,7 +60,9 @@ const ServicesPage = () => {
       <Container maxWidth="lg" className={classes.root}>
         <Grid container>
           <ParallelogramImg key="1" type="left" image={data.imgOne.childImageSharp.fluid} />
-          <ServiceItemContent title="Hardware Circuit Design" />
+          <ServiceItemContent
+            title={intl.formatMessage({ id: "hardware_circuit_design" })}
+            content={intl.formatMessage({ id: "hardware_circuit_design_desc" })} />
         </Grid>
       </Container>
     </Layout>

@@ -50,5 +50,7 @@
     "title": "Our <span>Clients</span>"
   },
   "contact_us": "Contact Us",
-  "request_title": "We love to collaborate with great minds.<br />Let’s open new possibilities together!"
+  "request_title": "We love to collaborate with great minds.<br />Let’s open new possibilities together!",
+  "hardware_circuit_design": "Hardware Circuit Design",
+  "hardware_circuit_design_desc": "We design the required electronic circuit & layout PCB in many fields. After designing the PCB, we can program the firmware as desired. <br />Experiences in designing and programing the MCU, ARM CPU of TI, STM, AVR, PIC, Motorola in analog and digital fields." 
 }
