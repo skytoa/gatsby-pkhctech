@@ -71,20 +71,21 @@ const ChangeLanguage = () => {
 
   return (
     <div className={classes.root}>
-      <Tooltip title={intl.formatMessage({ id: 'change_language' })} placement="bottom">
         <div>
-          <Button
-            className={classes.button}
-            ref={anchorRef}
-            aria-controls={open ? 'menu-list-grow' : undefined}
-            aria-haspopup="true"
-            onClick={handleToggle}
-            startIcon={<TranslateIcon />}
-            endIcon={<ExpandMoreIcon />}
-            aria-label={intl.formatMessage({ id: 'change_language' })}
-          >
-            <FormattedMessage id="language.current" />
-          </Button>
+          <Tooltip title={intl.formatMessage({ id: 'change_language' })} placement="bottom">
+            <Button
+              className={classes.button}
+              ref={anchorRef}
+              aria-controls={open ? 'menu-list-grow' : undefined}
+              aria-haspopup="true"
+              onClick={handleToggle}
+              startIcon={<TranslateIcon />}
+              endIcon={<ExpandMoreIcon />}
+              aria-label={intl.formatMessage({ id: 'change_language' })}
+            >
+              <FormattedMessage id="language.current" />
+            </Button>
+          </Tooltip>
           <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
             {({ TransitionProps, placement }) => (
               <Grow
@@ -116,7 +117,6 @@ const ChangeLanguage = () => {
             )}
           </Popper>
         </div>
-      </Tooltip>
     </div>
   );
 }
