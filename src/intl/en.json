@@ -6,6 +6,8 @@
   "hello_page2": "Hi from the second page",
   "go_page2": "Go to page 2",
   "welcome_page2": "Welcome to page 2",
+  "change_language": "Change language",
+  "menu": "Menu",
   "go_back": "Go back to the homepage",
   "notfound": {
     "header": "NOT FOUND",
@@ -27,8 +29,8 @@
   "navigation": {
     "home": "Home",
     "services": "Services",
-    "project": "Project",
-    "product": "Product",
+    "project": "Projects",
+    "product": "Products",
     "careers": "Careers",
     "about_us": "About Us",
     "contact_us": "Contact"

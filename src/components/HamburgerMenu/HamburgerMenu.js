@@ -1,4 +1,5 @@
 import React from 'react';
+import { useIntl } from "gatsby-plugin-intl";
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(theme => ({
@@ -40,9 +41,14 @@ const useStyles = makeStyles(theme => ({
 
 const HamburgerMenu = ({ toggle, visible }) => {
   const classes = useStyles();
-  
+  const intl = useIntl();
+
   return (
-    <button onClick={toggle} className={`${classes.menu} ${visible && classes.active}`}>
+    <button
+      onClick={toggle}
+      className={`${classes.menu} ${visible && classes.active}`}
+      aria-label={intl.formatMessage({ id: 'menu' })}
+    >
       <span className={classes.line} />
       <span className={classes.line} />
       <span className={classes.line} />

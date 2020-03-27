@@ -11,6 +11,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
 import Paper from '@material-ui/core/Paper';
 import Popper from '@material-ui/core/Popper';
+import Tooltip from '@material-ui/core/Tooltip';
 import TranslateIcon from '@material-ui/icons/Translate';
 
 const useStyles = makeStyles(theme => ({
@@ -70,49 +71,52 @@ const ChangeLanguage = () => {
 
   return (
     <div className={classes.root}>
-      <div>
-        <Button
-          className={classes.button}
-          ref={anchorRef}
-          aria-controls={open ? 'menu-list-grow' : undefined}
-          aria-haspopup="true"
-          onClick={handleToggle}
-          startIcon={<TranslateIcon />}
-          endIcon={<ExpandMoreIcon />}
-        >
-          <FormattedMessage id="language.current" />
-        </Button>
-        <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
-          {({ TransitionProps, placement }) => (
-            <Grow
-              {...TransitionProps}
-              style={{ transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}
-            >
-              <Paper>
-                <ClickAwayListener onClickAway={handleClose}>
-                  <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
-                    <IntlContextConsumer>
-                      {({ languages, language: currentLocale }) => {
-                        return (
-                          languages.map(language => (
-                            <MenuItem 
-                              key={language}
-                              onClick={() => handleChangeLocale(language)}
-                              selected={ currentLocale === language }
-                            >
-                              {intl.formatMessage({ id: LANGUAGE[language].name })}
-                            </MenuItem>
-                          ))
-                        )}
-                      }
-                    </IntlContextConsumer>
-                  </MenuList>
-                </ClickAwayListener>
-              </Paper>
-            </Grow>
-          )}
-        </Popper>
-      </div>
+      <Tooltip title={intl.formatMessage({ id: 'change_language' })} placement="bottom">
+        <div>
+          <Button
+            className={classes.button}
+            ref={anchorRef}
+            aria-controls={open ? 'menu-list-grow' : undefined}
+            aria-haspopup="true"
+            onClick={handleToggle}
+            startIcon={<TranslateIcon />}
+            endIcon={<ExpandMoreIcon />}
+            aria-label={intl.formatMessage({ id: 'change_language' })}
+          >
+            <FormattedMessage id="language.current" />
+          </Button>
+          <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
+            {({ TransitionProps, placement }) => (
+              <Grow
+                {...TransitionProps}
+                style={{ transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}
+              >
+                <Paper>
+                  <ClickAwayListener onClickAway={handleClose}>
+                    <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
+                      <IntlContextConsumer>
+                        {({ languages, language: currentLocale }) => {
+                          return (
+                            languages.map(language => (
+                              <MenuItem 
+                                key={language}
+                                onClick={() => handleChangeLocale(language)}
+                                selected={ currentLocale === language }
+                              >
+                                {intl.formatMessage({ id: LANGUAGE[language].name })}
+                              </MenuItem>
+                            ))
+                          )}
+                        }
+                      </IntlContextConsumer>
+                    </MenuList>
+                  </ClickAwayListener>
+                </Paper>
+              </Grow>
+            )}
+          </Popper>
+        </div>
+      </Tooltip>
     </div>
   );
 }
