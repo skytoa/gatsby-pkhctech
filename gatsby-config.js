@@ -3,7 +3,7 @@ module.exports = {
     title: `PKH Technologies - We Make It Simple`,
     description: `The company operates in the field of electronic circuit design, embedded system programming, software development for automatic control systems on PLC equipment in industry, developing SCADA systems.`,
     author: `@hoangbaovu`,
-    preview: `${__dirname}/src/images/preview.png`
+    image: `/images/preview.png`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
