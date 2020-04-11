@@ -1,4 +1,5 @@
 import React from 'react';
+import { useIntl } from "gatsby-plugin-intl";
 import Particles from 'react-particles-js';
 import { 
   makeStyles,
@@ -23,6 +24,7 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
     justifyContent: 'center',
     zIndex: 1,
+    flexDirection: 'column',
   },
   particles: {
     width: '100%',
@@ -35,9 +37,10 @@ const useStyles = makeStyles(theme => ({
   slogan: {
     fontFamily: 'SVN Aguda',
     color: '#fff',
-    fontSize: '1.6em',
+    fontSize: '2em',
     textShadow: '7px 2px 5px rgba(0, 0, 0, 0.3)',
     letterSpacing: '3px',
+    
 
     [theme.breakpoints.up('sm')]: {
       fontSize: '2em',
@@ -45,13 +48,30 @@ const useStyles = makeStyles(theme => ({
     },
 
     [theme.breakpoints.up('md')]: {
-      fontSize: '4em',
+      fontSize: '5em',
       letterSpacing: '10px',
+      lineHeight: 0,
+    },
+  },
+  mission: {
+    color: '#fff',
+    fontFamily: 'Roboto',
+    fontSize: '1.8em',
+    textShadow: '3px 2px 5px rgba(0, 0, 0, 0.3)',
+    letterSpacing: '4px',
+
+    [theme.breakpoints.up('sm')]: {
+      fontSize: '2em',
+    },
+
+    [theme.breakpoints.up('md')]: {
+      fontSize: '1.7em',
     },
   }
 }));
 
-const LandingParticles = () => {
+const LandingHero = () => {
+  const intl = useIntl();
   const classes = useStyles();
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up('md'));
@@ -59,7 +79,7 @@ const LandingParticles = () => {
   const particlesParams = {
     "particles": {
       "number": {
-        "value": matches ? '60' : '20'
+        "value": matches ? '40' : '20'
       },
       "size": {
         "value": 3
@@ -79,7 +99,8 @@ const LandingParticles = () => {
     <div className={classes.root}>
       <Container maxWidth="lg">
         <div className={classes.container}>
-          <h2 className={classes.slogan}>We Make It Simple</h2>
+          <h2 className={classes.slogan}>{intl.formatMessage({ id: "slogan" })}</h2>
+          <p className={classes.mission}>{intl.formatMessage({ id: "company.mission" })}</p>
         </div>
       </Container>
       <Particles
@@ -89,4 +110,4 @@ const LandingParticles = () => {
   )
 }
 
-export default LandingParticles;
+export default LandingHero;

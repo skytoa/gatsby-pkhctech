@@ -24,7 +24,8 @@
   "phone": "Phone",
   "email": "Email",
   "company": {
-    "address": "4F, HueCIT Building, <br />06 Le Loi, Vinh Ninh Ward, <br />Hue City, Vietnam"
+    "address": "4F, HueCIT Building, <br />06 Le Loi, Vinh Ninh Ward, <br />Hue City, Vietnam",
+    "mission": "Bring comfort and simplicity to customers"
   },
   "navigation": {
     "home": "Home",

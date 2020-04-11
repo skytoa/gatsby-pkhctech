@@ -24,7 +24,8 @@
   "phone": "Điện thoại",
   "email": "Email",
   "company": {
-    "address": "Tầng 4, Tòa nhà HueCIT, <br />06 Lê Lợi, Vĩnh Ninh Ward, <br />Thành phố Huế, Việt Nam"
+    "address": "Tầng 4, Tòa nhà HueCIT, <br />06 Lê Lợi, Vĩnh Ninh Ward, <br />Thành phố Huế, Việt Nam",
+    "mission": "Mang lại sự đơn giản và thoải mái cho khách hàng"
   },
   "navigation": {
     "home": "Trang Chủ",
