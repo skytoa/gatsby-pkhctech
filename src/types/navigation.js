@@ -9,11 +9,11 @@ export const NAVIGATION = [
   },
   {
     name:'navigation.project',
-    link:'/page-2',
+    link:'/projects',
   },
   {
     name:'navigation.product',
-    link:'/page-2',
+    link:'/products',
   },
   {
     name:'navigation.careers',
