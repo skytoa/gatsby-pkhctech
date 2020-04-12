@@ -1,7 +1,9 @@
 import React from 'react';
 import { 
   makeStyles,
+  Tooltip,
 } from '@material-ui/core';
+import { useIntl } from "gatsby-plugin-intl";
 import { APP_THEME } from "../types/theme";
 
 const useStyles = makeStyles(theme => ({
@@ -105,18 +107,22 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const ChangeDarkMode = ({ theme, toggle, label }) => {
+const ChangeDarkMode = ({ theme, toggle }) => {
   const classes = useStyles({theme});
+  const intl = useIntl();
+
+  const label = theme === APP_THEME.DARK ? intl.formatMessage({ id: 'activate_light_mode' }) : intl.formatMessage({ id: 'activate_dark_mode' });
   
   return (
-    <button className={classes.IconWrapper}
-      onClick={toggle}
-      aria-label={label}
-      title={label}
-    >
-      <div className={classes.MoonOrSun} />
-      <div className={classes.MoonMask} />
-    </button>
+    <Tooltip title={label} placement="bottom">
+      <button className={classes.IconWrapper}
+        onClick={toggle}
+        aria-label={label}
+      >
+        <div className={classes.MoonOrSun} />
+        <div className={classes.MoonMask} />
+      </button>
+    </Tooltip>
   )
 }
 

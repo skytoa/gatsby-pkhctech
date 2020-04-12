@@ -61,7 +61,7 @@ export default ({ toggleTheme, theme }) => {
           </CSSTransition>
           <div className={classes.right}>
             <ChangeLanguage />
-            <ChangeDarkMode theme={theme} toggle={toggleTheme} label="test" />
+            <ChangeDarkMode theme={theme} toggle={toggleTheme} />
             {/* <Switch onChange={handleChange}/> */}
             <HamburgerMenu toggle={toggleNav} visible={isNavVisible} />
           </div>
