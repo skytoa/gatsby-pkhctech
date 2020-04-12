@@ -39,14 +39,14 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.between('xs', 'md')]: {
       backgroundColor: theme.palette.type === APP_THEME.LIGHT ? '#fff' : `${theme.palette.background.secondary}`,
       flexDirection: 'column !important',
-      position: 'fixed',
+      position: 'absolute',
       top: '48px',
-      left: 0,
-      width: '100%',
+      left: '-16px',
+      width: '100vw',
       height: '100vh',
       alignItems: 'center',
       justifyContent: 'center',
-      overflowY: 'hidden',
+      overflow: 'scroll',
     },
   },
   navClose: {

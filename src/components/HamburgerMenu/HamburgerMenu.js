@@ -6,7 +6,7 @@ const useStyles = makeStyles(theme => ({
   menu: {
     display: 'flex',
     flexDirection: 'column',
-    margin: '-10px 20px 0 0',
+    margin: '-6px 0 0 20px',
     cursor: 'pointer',
     outline: 0,
     border: 0,

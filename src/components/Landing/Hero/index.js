@@ -59,6 +59,7 @@ const useStyles = makeStyles(theme => ({
     fontSize: '1.8em',
     textShadow: '3px 2px 5px rgba(0, 0, 0, 0.3)',
     letterSpacing: '4px',
+    textAlign: 'center',
 
     [theme.breakpoints.up('sm')]: {
       fontSize: '2em',
