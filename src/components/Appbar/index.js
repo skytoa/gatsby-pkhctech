@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { makeStyles, Switch } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
 import AppBar from "@material-ui/core/AppBar";
 import ChangeLanguage from '../../components/ChangeLanguage';
+import ChangeDarkMode from '../../components/ChangeDarkMode';
 import Container from '@material-ui/core/Container';
 import Toolbar from "@material-ui/core/Toolbar";
 // import Typography from "@material-ui/core/Typography";
@@ -15,6 +16,7 @@ import './navbar.css';
 const useStyles = makeStyles(theme => ({
   root: {
     height: '70px',
+    paddingTop: '3px',
   },
   titlebar: {
     flexGrow: 1,
@@ -34,16 +36,10 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default ({ onThemeTypeSwitch }) => {
+export default ({ toggleTheme, theme }) => {
   const classes = useStyles();
 
   const [isNavVisible, setNavVisibility] = useState(false);
-  const [themeType, setThemeType] = useState(false);
-
-  const handleChange = e => {
-    setThemeType(!themeType);
-    onThemeTypeSwitch();
-  };
 
   const toggleNav = () => {
     setNavVisibility(!isNavVisible);
@@ -65,7 +61,8 @@ export default ({ onThemeTypeSwitch }) => {
           </CSSTransition>
           <div className={classes.right}>
             <ChangeLanguage />
-            <Switch onChange={handleChange}/>
+            <ChangeDarkMode theme={theme} toggle={toggleTheme} label="test" />
+            {/* <Switch onChange={handleChange}/> */}
             <HamburgerMenu toggle={toggleNav} visible={isNavVisible} />
           </div>
         </Toolbar>

@@ -41,7 +41,7 @@ const Layout = ({ children }) => {
     <>
       <MuiThemeProvider theme={muiTheme}>
         <CssBaseline />
-        <AppBar onThemeTypeSwitch={toggleTheme} />
+        <AppBar theme={theme} toggleTheme={toggleTheme} />
         <main>{children}</main>
         <Footer />
       </MuiThemeProvider>

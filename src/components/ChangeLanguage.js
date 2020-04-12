@@ -17,6 +17,7 @@ import TranslateIcon from '@material-ui/icons/Translate';
 const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
+    marginTop: '3px',
   },
   button: {
     color: theme.palette.text.primary,
