@@ -55,6 +55,10 @@ const IndexPage = () => {
             content: site.siteMetadata.siteUrl + imgPreview,
           },
           {
+            property: `og:url`,
+            content: site.siteMetadata.siteUrl,
+          },
+          {
             property: `og:type`,
             content: `website`,
           },
