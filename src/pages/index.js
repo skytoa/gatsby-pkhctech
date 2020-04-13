@@ -1,7 +1,7 @@
 import React from "react";
-import { useIntl } from "gatsby-plugin-intl";
 import Layout from "../layouts";
-import SEO from "../layouts/seo";
+import Helmet from "react-helmet"
+import { useStaticQuery, graphql } from "gatsby";
 import { 
   LandingApplication,
   LandingClients,
@@ -11,13 +11,24 @@ import {
 } from '../components/Landing';
 
 const IndexPage = () => {
-  const intl = useIntl();
+
+  const { site } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+          }
+        }
+      }
+    `
+  )
 
   return (
     <Layout>
-      <SEO
-        title={intl.formatMessage({ id: "introduce" })}
-      />
+      <Helmet>
+        <title>{site.siteMetadata.title}</title>
+      </Helmet>
       <LandingHero />
       <LandingOurServices />
       <LandingApplication />
