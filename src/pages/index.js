@@ -3,6 +3,9 @@ import Layout from "../layouts";
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby";
 import { useIntl } from "gatsby-plugin-intl";
+import { useLocation } from "@reach/router";
+import imgPreview from '../images/preview.png';
+
 import { 
   LandingApplication,
   LandingClients,
@@ -13,6 +16,7 @@ import {
 
 const IndexPage = () => {
   const intl = useIntl();
+  const location = useLocation();
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -21,7 +25,7 @@ const IndexPage = () => {
             title
             description
             author
-            image
+            siteUrl
           }
         }
       }
@@ -50,7 +54,7 @@ const IndexPage = () => {
           },
           {
             property: `og:image`,
-            content: site.siteMetadata.image,
+            content: location.origin + imgPreview,
           },
           {
             property: `og:type`,
