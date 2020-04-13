@@ -52,7 +52,7 @@ const IndexPage = () => {
           },
           {
             property: `og:image`,
-            content: window.location.origin + imgPreview,
+            content: site.siteMetadata.siteUrl + imgPreview,
           },
           {
             property: `og:type`,
