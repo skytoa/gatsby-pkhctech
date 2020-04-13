@@ -10,10 +10,8 @@ import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 import imgPreview from '../images/preview.png';
-import { useLocation } from "@reach/router";
 
 function SEO({ description, lang, meta, title, image }) {
-  const location = useLocation();
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -53,7 +51,7 @@ function SEO({ description, lang, meta, title, image }) {
         },
         {
           property: `og:image`,
-          content: image ? image : location.origin + imgPreview,
+          content: image ? image : window.location.origin + imgPreview,
         },
         {
           property: `og:type`,
