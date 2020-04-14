@@ -7,11 +7,19 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
     marginBottom: '60px',
     marginTop: '160px',
+
+    [theme.breakpoints.down('sm')]: {
+      marginTop: 0,
+    },
   },
   content: {
     fontSize: '1.6em',
     lineHeight: 2,
-    paddingLeft: '100px'
+    paddingLeft: '100px',
+
+    [theme.breakpoints.down('sm')]: {
+      paddingLeft: 0,
+    },
   }
 }));
 

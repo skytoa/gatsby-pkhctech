@@ -30,7 +30,7 @@ const ServicesPage = () => {
     query {
       imgOne: file(relativePath: { eq: "services/circuit-board.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 674, quality: 100) {
+          fluid(maxWidth: 474, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }

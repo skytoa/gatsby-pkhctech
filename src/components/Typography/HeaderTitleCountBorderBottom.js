@@ -7,10 +7,13 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     marginBottom: '60px',
-    marginTop: '100px',
     fontSize: '2.9rem',
     paddingLeft: '97px',
     fontFamily: 'SVN Aguda',
+
+    [theme.breakpoints.down('sm')]: {
+      paddingLeft: 0
+    },
 
     '&::before': {
       counterIncrement: 'service-counter',
@@ -19,6 +22,10 @@ const useStyles = makeStyles(theme => ({
       position: 'absolute',
       left: 0,
       top: '-39px',
+
+      [theme.breakpoints.down('sm')]: {
+        top: '-120px',
+      },
     },
   },
 }));

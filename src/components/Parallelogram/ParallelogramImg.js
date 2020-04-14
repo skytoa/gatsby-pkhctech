@@ -15,6 +15,13 @@ const useStyles = makeStyles(theme => ({
     marginBottom: '30px',
     transition: 'all .3s ease-in-out',
     clipPath: props => props.type === 'left' ? clipPathLeft : clipPathRight,
+    width: '390px',
+    margin: '0 auto',
+
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
+      clipPath: 'none !important',
+    },
 
     '&:hover': {
       opacity: 0.8,
@@ -32,7 +39,7 @@ const ParallelogramImg = ({type, image}) => {
   return (
     <Grid item xs={12} sm={12} md={5} className={classes.root}>
       <div className={classes.item}>
-      <Img fluid={image} className={classes.img} />
+        <Img fluid={image} className={classes.img} />
       </div>
     </Grid>
   )
