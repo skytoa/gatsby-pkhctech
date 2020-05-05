@@ -57,5 +57,7 @@
   "contact_us": "Liên hệ chúng tôi",
   "request_title": "Chúng tôi thích hợp tác với những bộ óc tuyệt vời.<br />Hãy cùng nhau mở những tiềm năng mới!",
   "hardware_circuit_design": "Thiết kế mạch phần cứng",
-  "hardware_circuit_design_desc": "Chúng tôi thiết kế mạch điện tử & bố trí PCB theo yêu cầu trong nhiều lĩnh vực. Sau khi thiết kế PCB, chúng tôi có thể lập trình firmware theo yêu cầu. <br />Kinh nghiệm trong việc thiết kế và lập trình MCU, CPU ARM của TI, STM, AVR, PIC, Motorola trong các lĩnh vực analog và kỹ thuật số." 
+  "hardware_circuit_design_desc": "Chúng tôi thiết kế mạch điện tử & bố trí PCB theo yêu cầu trong nhiều lĩnh vực. Sau khi thiết kế PCB, chúng tôi có thể lập trình firmware theo yêu cầu. <br />Kinh nghiệm trong việc thiết kế và lập trình MCU, CPU ARM của TI, STM, AVR, PIC, Motorola trong các lĩnh vực analog và kỹ thuật số.", 
+  "embedded_system_programming": "Lập trình hệ thống nhúng",
+  "embedded_system_programming_desc": "Chúng tôi thiết kế và phát triển các thiết bị và hệ thống IoT. Các nền tảng phát triển IoT có thể giúp các công ty nhanh chóng thực hiện kết nối trực tiếp với các sản phẩm và hỗ trợ giao tiếp mở giữa các loại sản phẩm khác nhau."
 }

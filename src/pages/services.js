@@ -17,7 +17,8 @@ import { useStaticQuery, graphql } from "gatsby";
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
-    counterReset: 'service-counter',
+    marginBottom: '60px',
+    // counterReset: 'service-counter',
   },
 }));
 
@@ -30,15 +31,15 @@ const ServicesPage = () => {
     query {
       imgOne: file(relativePath: { eq: "services/circuit-board.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 474, quality: 100) {
+          fluid(maxWidth: 474, quality: 90) {
             ...GatsbyImageSharpFluid
           }
         }
       },
-      imgTwo: file(relativePath: { eq: "application/img2.jpg" }) {
+      imgTwo: file(relativePath: { eq: "services/programming.jpg" }) {
         childImageSharp {
-          fixed(width: 500) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 388, quality: 90) {
+            ...GatsbyImageSharpFluid
           }
         }
       },
@@ -63,6 +64,12 @@ const ServicesPage = () => {
           <ServiceItemContent
             title={intl.formatMessage({ id: "hardware_circuit_design" })}
             content={intl.formatMessage({ id: "hardware_circuit_design_desc" })} />
+        </Grid>
+        <Grid container>
+          <ParallelogramImg key="2" type="right" image={data.imgTwo.childImageSharp.fluid} />
+          <ServiceItemContent
+            title={intl.formatMessage({ id: "embedded_system_programming" })}
+            content={intl.formatMessage({ id: "embedded_system_programming_desc" })} />
         </Grid>
       </Container>
     </Layout>

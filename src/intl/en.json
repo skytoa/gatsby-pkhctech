@@ -57,5 +57,7 @@
   "contact_us": "Contact Us",
   "request_title": "We love to collaborate with great minds.<br />Let’s open new possibilities together!",
   "hardware_circuit_design": "Hardware Circuit Design",
-  "hardware_circuit_design_desc": "We design the required electronic circuit & layout PCB in many fields. After designing the PCB, we can program the firmware as desired. <br />Experiences in designing and programing the MCU, ARM CPU of TI, STM, AVR, PIC, Motorola in analog and digital fields." 
+  "hardware_circuit_design_desc": "We design the required electronic circuit & layout PCB in many fields. After designing the PCB, we can program the firmware as desired. <br />Experiences in designing and programing the MCU, ARM CPU of TI, STM, AVR, PIC, Motorola in analog and digital fields.",
+  "embedded_system_programming": "Embedded System Programming",
+  "embedded_system_programming_desc": "We design and develop IOT devices and systems. <br />IoT development platforms can help companies quickly implement direct connectivity with products, and support the type of open communication among different types of products."
 }

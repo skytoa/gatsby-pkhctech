@@ -8,8 +8,13 @@ const clipPathLeft = 'polygon(0 0, 75% 0, 100% 100%, 25% 100%)';
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
-    marginBottom: '60px',
     marginTop: '160px',
+    order: props => props.type === 'left' ? 0 : 1,
+
+    [theme.breakpoints.down('sm')]: {
+      marginTop: 0,
+      order: props => props.type === 'left' ? 0 : 0,
+    },
   },
   item: {
     marginBottom: '30px',

@@ -15,18 +15,18 @@ const useStyles = makeStyles(theme => ({
       paddingLeft: 0
     },
 
-    '&::before': {
-      counterIncrement: 'service-counter',
-      content: "counter(service-counter, decimal-leading-zero)",
-      fontSize: '5rem',
-      position: 'absolute',
-      left: 0,
-      top: '-39px',
+    // '&::before': {
+    //   counterIncrement: 'service-counter',
+    //   content: "counter(service-counter, decimal-leading-zero)",
+    //   fontSize: '5rem',
+    //   position: 'absolute',
+    //   left: 0,
+    //   top: '-39px',
 
-      [theme.breakpoints.down('sm')]: {
-        top: '-120px',
-      },
-    },
+    //   [theme.breakpoints.down('sm')]: {
+    //     top: '-120px',
+    //   },
+    // },
   },
 }));
 

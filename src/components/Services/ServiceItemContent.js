@@ -5,7 +5,6 @@ import { HeaderTitleCountBorderBottom } from '../Typography';
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
-    marginBottom: '60px',
     marginTop: '160px',
 
     [theme.breakpoints.down('sm')]: {
