@@ -39,6 +39,10 @@ const IndexPage = () => {
         title={site.siteMetadata.title}
         meta={[
           {
+            name: `robots`,
+            content: `index,follow`
+          },
+          {
             name: `description`,
             content: site.siteMetadata.description,
           },

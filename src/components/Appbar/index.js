@@ -41,7 +41,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default ({ toggleTheme, theme, titleSite }) => {
+export default ({ toggleTheme, theme }) => {
   const classes = useStyles();
 
   const [isNavVisible, setNavVisibility] = useState(false);
@@ -54,11 +54,9 @@ export default ({ toggleTheme, theme, titleSite }) => {
     <AppBar position="fixed" color="primary" className={classes.root}>
       <Container maxWidth="lg">
         <Toolbar className={classes.titlebar}>
-          <h1 title={titleSite} className={classes.titleSite}>
-            <AniLink to="/">
-              <img src={LogoColor} alt="Logo" className={classes.logo} />
-            </AniLink>
-          </h1>
+          <AniLink to="/">
+            <img src={LogoColor} alt="Logo" className={classes.logo} />
+          </AniLink>
           <CSSTransition
             in={isNavVisible}
             timeout={350}
@@ -81,5 +79,4 @@ export default ({ toggleTheme, theme, titleSite }) => {
 AppBar.propTypes = {
   toggleTheme: PropTypes.string,
   theme: PropTypes.string,
-  titleSite: PropTypes.string,
 }

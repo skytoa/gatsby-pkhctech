@@ -100,7 +100,7 @@ const LandingHero = () => {
     <div className={classes.root}>
       <Container maxWidth="lg">
         <div className={classes.container}>
-          <h2 className={classes.slogan}>{intl.formatMessage({ id: "slogan" })}</h2>
+          <h1 className={classes.slogan}>{intl.formatMessage({ id: "slogan" })}</h1>
           <p className={classes.mission}>{intl.formatMessage({ id: "company.mission" })}</p>
         </div>
       </Container>

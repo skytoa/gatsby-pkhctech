@@ -34,7 +34,7 @@ const ClientsItem = ({ to, name, image }) => {
         <Img 
           fixed={image}
           imgStyle={{ objectFit: 'contain' }}
-          alt={ name }
+          alt={name}
         />
       </a>
     </Grid>

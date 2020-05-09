@@ -67,25 +67,25 @@ const ServicesPage = () => {
       />
       <Container maxWidth="lg" className={classes.root}>
         <Grid container>
-          <ParallelogramImg key="1" type="left" image={data.imgOne.childImageSharp.fluid} />
+          <ParallelogramImg key="1" type="left" image={data.imgOne.childImageSharp.fluid} title={intl.formatMessage({ id: "hardware_circuit_design" })} />
           <ServiceItemContent
             title={intl.formatMessage({ id: "hardware_circuit_design" })}
             content={intl.formatMessage({ id: "hardware_circuit_design_desc" })} />
         </Grid>
         <Grid container>
-          <ParallelogramImg key="2" type="right" image={data.imgTwo.childImageSharp.fluid} />
+          <ParallelogramImg key="2" type="right" image={data.imgTwo.childImageSharp.fluid} title={intl.formatMessage({ id: "embedded_system_programming" })} />
           <ServiceItemContent
             title={intl.formatMessage({ id: "embedded_system_programming" })}
             content={intl.formatMessage({ id: "embedded_system_programming_desc" })} />
         </Grid>
         <Grid container>
-          <ParallelogramImg key="3" type="left" image={data.imgThree.childImageSharp.fluid} />
+          <ParallelogramImg key="3" type="left" image={data.imgThree.childImageSharp.fluid} title={intl.formatMessage({ id: "scada_system" })} />
           <ServiceItemContent
             title={intl.formatMessage({ id: "scada_system" })}
             content={intl.formatMessage({ id: "scada_system_desc" })} />
         </Grid>
         <Grid container>
-          <ParallelogramImg key="4" type="right" image={data.imgFour.childImageSharp.fluid} />
+          <ParallelogramImg key="4" type="right" image={data.imgFour.childImageSharp.fluid} title={intl.formatMessage({ id: "software_design" })} />
           <ServiceItemContent
             title={intl.formatMessage({ id: "software_design" })}
             content={intl.formatMessage({ id: "software_design_desc" })} />

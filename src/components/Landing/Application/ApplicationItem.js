@@ -89,7 +89,7 @@ const ApplicationItem = ({ to, title, image }) => {
   return (
     <Grid item xs={12} sm={12} md={4}>
       <div className={classes.parallelogram}>
-        <a href={to} className={classes.item}>
+        <a href={to} className={classes.item} title={title}>
           <h3 className={classes.item__name}>{title}</h3>
         </a>
       </div>
