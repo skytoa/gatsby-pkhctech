@@ -59,5 +59,9 @@
   "hardware_circuit_design": "Hardware Circuit Design",
   "hardware_circuit_design_desc": "We design the required electronic circuit & layout PCB in many fields. After designing the PCB, we can program the firmware as desired. <br />Experiences in designing and programing the MCU, ARM CPU of TI, STM, AVR, PIC, Motorola in analog and digital fields.",
   "embedded_system_programming": "Embedded System Programming",
-  "embedded_system_programming_desc": "We design and develop IOT devices and systems. <br />IoT development platforms can help companies quickly implement direct connectivity with products, and support the type of open communication among different types of products."
+  "embedded_system_programming_desc": "We design and develop IOT devices and systems. <br />IoT development platforms can help companies quickly implement direct connectivity with products, and support the type of open communication among different types of products.",
+  "scada_system": "SCADA System",
+  "scada_system_desc": "PLC programming is extremely valuable to modern industry for its ability to minimize the monotony of simplistic work tasks, to simplify wiring and reduce material costs (wire is very expensive!), and to create dynamic, complex routines that outdated methods such as mechanical relay-based control simply cannot handle, and especially cannot handle in a cost-effective manner.",
+  "software_design": "Software Design",
+  "software_design_desc": "We are a professionally recognized website design and software development company having huge experience in developing corporate designing, software development best match to customer's need and requirements. We have expertise in working with a variety of customers from large companies to individuals. Our successful assignments with client companies have established our reputation as superior providers of IT products & services."
 }

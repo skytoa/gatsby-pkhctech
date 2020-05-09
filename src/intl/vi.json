@@ -59,5 +59,9 @@
   "hardware_circuit_design": "Thiết kế mạch phần cứng",
   "hardware_circuit_design_desc": "Chúng tôi thiết kế mạch điện tử & bố trí PCB theo yêu cầu trong nhiều lĩnh vực. Sau khi thiết kế PCB, chúng tôi có thể lập trình firmware theo yêu cầu. <br />Kinh nghiệm trong việc thiết kế và lập trình MCU, CPU ARM của TI, STM, AVR, PIC, Motorola trong các lĩnh vực analog và kỹ thuật số.", 
   "embedded_system_programming": "Lập trình hệ thống nhúng",
-  "embedded_system_programming_desc": "Chúng tôi thiết kế và phát triển các thiết bị và hệ thống IoT. Các nền tảng phát triển IoT có thể giúp các công ty nhanh chóng thực hiện kết nối trực tiếp với các sản phẩm và hỗ trợ giao tiếp mở giữa các loại sản phẩm khác nhau."
+  "embedded_system_programming_desc": "Chúng tôi thiết kế và phát triển các thiết bị và hệ thống IoT. Các nền tảng phát triển IoT có thể giúp các công ty nhanh chóng thực hiện kết nối trực tiếp với các sản phẩm và hỗ trợ giao tiếp mở giữa các loại sản phẩm khác nhau.",
+  "scada_system": "Hệ thống SCADA",
+  "scada_system_desc": "Lập trình PLC rất có giá trị đối với ngành công nghiệp hiện đại vì khả năng giảm thiểu sự đơn điệu của các công việc đơn giản, để đơn giản hóa hệ thống dây điện và giảm chi phí vật liệu. Và tạo ra các thói quen năng động, phức tạp, lỗi thời như rơle cơ học - kiểm soát dựa trên đơn giản là không thể xử lý và đặc biệt là không thể xử lý theo cách có hiệu quả về chi phí.",
+  "software_design": "Software Design",
+  "software_design_desc": "Chúng tôi là một phát triển phần mềm có kinh nghiệm trong việc phát triển phần mềm phù hợp nhất với nhu cầu của khách hàng. Chúng tôi có chuyên môn làm việc từ các công ty lớn cho đến các cá nhân. Nhiệm vụ của chúng tôi với các công ty khách hàng đã tạo dựng uy tín với tư cách là nhà cung cấp vượt trội về sản phẩm và dịch vụ CNTT."
 }

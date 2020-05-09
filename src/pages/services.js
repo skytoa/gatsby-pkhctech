@@ -43,13 +43,20 @@ const ServicesPage = () => {
           }
         }
       },
-      imgThree: file(relativePath: { eq: "application/img3.jpg" }) {
+      imgThree: file(relativePath: { eq: "services/scada_system.jpg" }) {
         childImageSharp {
-          fixed(width: 500) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 388, quality: 90) {
+            ...GatsbyImageSharpFluid
           }
         }
-      }
+      },
+      imgFour: file(relativePath: { eq: "services/software_design.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 388, quality: 90) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
     }
   `)
 
@@ -70,6 +77,18 @@ const ServicesPage = () => {
           <ServiceItemContent
             title={intl.formatMessage({ id: "embedded_system_programming" })}
             content={intl.formatMessage({ id: "embedded_system_programming_desc" })} />
+        </Grid>
+        <Grid container>
+          <ParallelogramImg key="3" type="left" image={data.imgThree.childImageSharp.fluid} />
+          <ServiceItemContent
+            title={intl.formatMessage({ id: "scada_system" })}
+            content={intl.formatMessage({ id: "scada_system_desc" })} />
+        </Grid>
+        <Grid container>
+          <ParallelogramImg key="4" type="right" image={data.imgFour.childImageSharp.fluid} />
+          <ServiceItemContent
+            title={intl.formatMessage({ id: "software_design" })}
+            content={intl.formatMessage({ id: "software_design_desc" })} />
         </Grid>
       </Container>
     </Layout>

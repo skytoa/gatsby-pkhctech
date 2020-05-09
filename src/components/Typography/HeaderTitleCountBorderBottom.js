@@ -6,7 +6,7 @@ const useStyles = makeStyles(theme => ({
     position: 'relative',
   },
   title: {
-    marginBottom: '60px',
+    marginBottom: '16px',
     fontSize: '2.9rem',
     paddingLeft: '97px',
     fontFamily: 'SVN Aguda',
