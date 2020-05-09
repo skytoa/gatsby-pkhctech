@@ -11,6 +11,7 @@ import { AniLink } from '../../components/TransitionLink';
 import Navbar from './Navbar';
 import { HamburgerMenu } from "../HamburgerMenu";
 import { CSSTransition } from 'react-transition-group';
+import PropTypes from "prop-types";
 import './navbar.css';
 
 const useStyles = makeStyles(theme => ({
@@ -33,10 +34,14 @@ const useStyles = makeStyles(theme => ({
     '&:hover': {
       opacity: .8,
     }
+  },
+  titleSite: {
+    lineHeight: 0,
+    margin: 0
   }
 }));
 
-export default ({ toggleTheme, theme }) => {
+export default ({ toggleTheme, theme, titleSite }) => {
   const classes = useStyles();
 
   const [isNavVisible, setNavVisibility] = useState(false);
@@ -49,9 +54,11 @@ export default ({ toggleTheme, theme }) => {
     <AppBar position="fixed" color="primary" className={classes.root}>
       <Container maxWidth="lg">
         <Toolbar className={classes.titlebar}>
-          <AniLink to="/">
-            <img src={LogoColor} alt="Logo" className={classes.logo} />
-          </AniLink>
+          <h1 title={titleSite} className={classes.titleSite}>
+            <AniLink to="/">
+              <img src={LogoColor} alt="Logo" className={classes.logo} />
+            </AniLink>
+          </h1>
           <CSSTransition
             in={isNavVisible}
             timeout={350}
@@ -69,4 +76,10 @@ export default ({ toggleTheme, theme }) => {
       </Container>
     </AppBar>
   )
+}
+
+AppBar.propTypes = {
+  toggleTheme: PropTypes.string,
+  theme: PropTypes.string,
+  titleSite: PropTypes.string,
 }
