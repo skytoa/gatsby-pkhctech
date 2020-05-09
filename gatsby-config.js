@@ -52,6 +52,12 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://pkhctech.ineo.vn`,
+      },
+    },
+    {
       resolve: `gatsby-source-wordpress`,
       options: {
         baseUrl: `vuhb.000webhostapp.com`,
