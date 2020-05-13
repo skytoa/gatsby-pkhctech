@@ -12,6 +12,7 @@ import SEO from "../layouts/seo";
 // } from '../components/Landing';
 import Img from "gatsby-image";
 import { useStaticQuery, graphql } from "gatsby";
+import CompanyMission from '../components/CompanyMission';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -95,6 +96,7 @@ const AboutUsPage = () => {
           </Grid>
         </Grid>
       </Container>
+      <CompanyMission />
     </Layout>
   )
 }
