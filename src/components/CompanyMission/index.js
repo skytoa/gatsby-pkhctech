@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { FormattedMessage } from "gatsby-plugin-intl";
 import Link from '@material-ui/core/Link';
+import CompanyMissionLogo from '../../images/company_mission_logo.png';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -12,6 +13,29 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'center',
     textAlign: 'center',
     padding: '120px 0',
+    position: 'relative',
+
+    [theme.breakpoints.down('md')]: {
+      padding: '70px 0',
+    },
+
+    '&:before': {
+      content: "''",
+      position: 'absolute',
+      bottom: 0,
+      left: 0,
+      background: `url(${CompanyMissionLogo}) no-repeat bottom left`,
+      width: '100%',
+      height: '100%',
+
+      [theme.breakpoints.down('md')]: {
+        height: '90%',
+        width: '43%',
+        backgroundSize: 'contain',
+        left: '50%',
+        transform: 'translate(-50%, 0)',
+      },
+    }
   },
   mission: {
     color: '#fff',
@@ -19,6 +43,10 @@ const useStyles = makeStyles(theme => ({
     fontWeight: 'bold',
     fontFamily: 'SVN-Aguda',
     lineHeight: 1.8,
+
+    [theme.breakpoints.down('md')]: {
+      fontSize: '1em',
+    },
   }
 }));
 
