@@ -10,7 +10,7 @@ import {
 
 const useStyles = makeStyles(theme => ({
   root: {
-    background: theme.palette.color.white,
+    background: theme.palette.background.secondary,
     position: 'relative',
     height: '100vh',
     width: '100%',
