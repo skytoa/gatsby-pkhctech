@@ -1,7 +1,5 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { FormattedMessage } from "gatsby-plugin-intl";
-import Link from '@material-ui/core/Link';
 import CompanyMissionLogo from '../../images/company_mission_logo.png';
 
 const useStyles = makeStyles(theme => ({
@@ -14,6 +12,7 @@ const useStyles = makeStyles(theme => ({
     textAlign: 'center',
     padding: '120px 0',
     position: 'relative',
+    marginBottom: "60px",
 
     [theme.breakpoints.down('md')]: {
       padding: '70px 0',

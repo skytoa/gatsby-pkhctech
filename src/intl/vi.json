@@ -67,5 +67,11 @@
   "software_design_desc": "Chúng tôi là một phát triển phần mềm có kinh nghiệm trong việc phát triển phần mềm phù hợp nhất với nhu cầu của khách hàng. Chúng tôi có chuyên môn làm việc từ các công ty lớn cho đến các cá nhân. Nhiệm vụ của chúng tôi với các công ty khách hàng đã tạo dựng uy tín với tư cách là nhà cung cấp vượt trội về sản phẩm và dịch vụ CNTT.",
   "page_about_us": {
     "introduction": "PKH thành lập vào ngày 14 tháng 7 năm 2017 với số lượng 20 thành viên.<br /><br />Công ty hoạt động trong lĩnh vực thiết kế mạch điện tử, lập trình hệ thống nhúng, phát triển phần mềm cho các hệ thống điều khiển tự động trên thiết bị PLC trong công nghiệp, phát triển hệ thống SCADA. Các khách hàng chính của công ty chủ yếu tập trung vào thị trường Hàn Quốc, Mỹ và Singapore. Ngoài việc thực hiện các dự án theo khách hàng yêu cầu, công ty chúng tôi đã phát triển các sản phẩm công nghệ chiến lược riêng của mình hướng tới phát triển bền vững và mở rộng trong tương lai.<br /><br />Đội ngũ thành viên chủ chốt của công ty được đào tạo bài bản ở nước ngoài, có nhiều năm kinh nghiệm tham gia và thực hiện các dự án tại Hàn Quốc, Nga, Đức và Úc trong lĩnh vực tự động hóa và công nghệ phần mềm. Chúng tôi và đội ngũ kỹ sư trẻ, năng động, nhiệt huyết và đam mê luôn duy trì niềm tin xây dựng một công ty công nghệ có văn hóa làm việc chuyên nghiệp, có trách nhiệm tạo ra những sản phẩm chất lượng cao cho khách hàng."
-  }
+  },
+  "major_areas_of_the_company": "Các lĩnh vực chính của công ty",
+  "design_and_construction_of_industrial_automation_control_system_scada_system": "Thiết kế và thi công hệ thống điều khiển tự động hóa công nghiệp, hệ thống SCADA",
+  "programming_for_plc_devices": "Lập trình cho các thiết bị PLC",
+  "designing_and_programming_of_robot_control": "Thiết kế và lập trình điều khiển Robot",
+  "developing_iot_applications": "Phát triển ứng dụng IoT",
+  "web_and_mobile_application_development": "Phát triển web và ứng dụng di động"
 }

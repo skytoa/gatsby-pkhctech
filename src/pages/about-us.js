@@ -13,6 +13,7 @@ import SEO from "../layouts/seo";
 import Img from "gatsby-image";
 import { useStaticQuery, graphql } from "gatsby";
 import CompanyMission from '../components/CompanyMission';
+import MajorAreas from '../components/MajorAreas';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -97,6 +98,7 @@ const AboutUsPage = () => {
         </Grid>
       </Container>
       <CompanyMission />
+      <MajorAreas />
     </Layout>
   )
 }

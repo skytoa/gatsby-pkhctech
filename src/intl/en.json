@@ -67,5 +67,11 @@
   "software_design_desc": "We are a professionally recognized website design and software development company having huge experience in developing corporate designing, software development best match to customer's need and requirements. We have expertise in working with a variety of customers from large companies to individuals. Our successful assignments with client companies have established our reputation as superior providers of IT products & services.",
   "page_about_us": {
     "introduction": "PKH was established on July 14, 2017 with a number of 20 members.<br /><br />The company operates in the field of electronic circuit design, embedded system programming, software development for automatic control systems on PLC equipment in industry, developing SCADA systems. The company’s main customers are mainly focusing on the Korean, US and Singapore markets. In addition to implementing projects of demanding customers, our company has been developing its own strategic technology products towards sustainable development and future expansion.<br /><br />The team of key members of the company is well-trained abroad, has many years of experience participating and implementing projects in Korea, Russia, Germany and Australia in the field of automation and software technology. We and a team of young, dynamic, enthusiastic and passionate engineers always maintain the belief of building a technology company with a professional working culture, responsibility to create high-quality products for customers."
-  }
+  },
+  "major_areas_of_the_company": "Major Areas Of The Company",
+  "design_and_construction_of_industrial_automation_control_system_scada_system": "Design and construction of industrial automation control system, SCADA system",
+  "programming_for_plc_devices": "Programming for PLC devices",
+  "designing_and_programming_of_robot_control": "Designing and programming of Robot control",
+  "developing_iot_applications": "Developing IoT applications",
+  "web_and_mobile_application_development": "Web and mobile application development"
 }
