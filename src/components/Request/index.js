@@ -10,6 +10,7 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'row',
     justifyContent: 'center',
     position: 'relative',
+    marginBottom: '60px',
   },
 }));
 

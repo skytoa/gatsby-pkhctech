@@ -9,7 +9,7 @@ import MajorAreasImg from '../../images/major_areas_img.png';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    
+    marginBottom: '60px',
   },
   heading: {
     fontFamily: 'SVN Aguda',

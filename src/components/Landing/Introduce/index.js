@@ -10,7 +10,6 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     flexDirection: 'column',
     flexGrow: 1,
-    marginBottom: '60px',
     position: 'relative',
     
     '&::before': {

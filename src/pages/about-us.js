@@ -14,6 +14,7 @@ import Img from "gatsby-image";
 import { useStaticQuery, graphql } from "gatsby";
 import CompanyMission from '../components/CompanyMission';
 import MajorAreas from '../components/MajorAreas';
+import Request from '../components/Request';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -99,6 +100,7 @@ const AboutUsPage = () => {
       </Container>
       <CompanyMission />
       <MajorAreas />
+      <Request title={intl.formatMessage({ id: "request_title" })} />
     </Layout>
   )
 }
